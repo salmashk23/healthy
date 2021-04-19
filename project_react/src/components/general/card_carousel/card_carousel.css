@@ -1,0 +1,55 @@
+.cards-container {
+    padding-bottom: 20px;
+  border-radius: 6px;
+  color: #333;
+  background: #eee;
+  box-shadow: 0 0 1rem #000 inset;
+  position: relative;
+}
+
+.cardd {
+    margin-top: 20px;
+    box-shadow: 0 1px 1rem -4px #000;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    min-height: 580px;
+}
+
+
+#cardCaro{
+    background: #F0F0F0  ;
+    color:#5C646F  ;
+    font-family:  sans-serif;
+}
+
+
+
+@media screen and (max-width: 625px) {
+  .container {
+    width: 100%
+  }
+
+  .cards-container {
+    padding: .5rem;
+  }
+
+  .card {
+    margin: .5rem;
+  }
+}
+
+
+#more a :hover{
+    text-decoration: none;
+
+}
+
+
+
+#more a {
+    color: white;
+    transition: color .2s;
+}

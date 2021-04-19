@@ -1,0 +1,30 @@
+#subtitle{
+    color: #FFB64C ;
+    font-family: 'Dancing Script';
+    font-size: 25px;
+
+}
+#icon{
+    font-size: 25px;
+    display: inline-block;
+    list-style-type: none;
+}
+
+#icon li {
+    float: left;
+    margin-right: 5px;
+
+
+  }
+
+  #icon a  {
+      color:white;
+
+
+    }
+
+  #icon a :hover {
+      color:#FFB64C ;
+
+
+    }

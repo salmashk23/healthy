@@ -1,0 +1,12 @@
+#contact i{
+    font-size: 40px;
+}
+#contact a{
+    text-decoration: none;
+    color: #FFB64C;
+}
+
+
+#contact a:hover{
+    color:#4180CB;
+}

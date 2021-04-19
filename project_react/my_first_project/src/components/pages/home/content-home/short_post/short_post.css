@@ -1,0 +1,9 @@
+#boton a :hover{
+    text-decoration: none;
+
+}
+
+#boton a {
+    color: white;
+    transition: color .2s;
+}

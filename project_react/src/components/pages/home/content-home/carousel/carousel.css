@@ -1,0 +1,10 @@
+.sliderimg{
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+#note{
+    background: rgba(16, 5, 0, 0.5);
+    color: white;
+    font-family: 'Shippori Mincho' ;
+}

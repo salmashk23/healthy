@@ -1,0 +1,19 @@
+#content{
+    background: RGB(0,0,0 , 0.5);
+    background-size: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family: 'Shippori Mincho';
+    font-size: 18px;
+
+}
+
+#label{
+    font-size: 18px;
+}
+
+
+
+#select{
+    height: 35px;
+}

@@ -1,0 +1,14 @@
+#footer{
+  background: rgba(16, 5, 0, 0.5);
+  border: 2px solid white;
+  color:white;
+  margin: 10px;
+}
+.title-web{
+    font-size: 30px;
+    color: MintCream;
+}
+.title{
+    font-size: 25px;
+    color: MintCream;
+}

@@ -1,0 +1,15 @@
+#link-menu{
+    margin-left: 35px;
+    color:#FFB64C;
+ }
+
+#footerLinks a{
+    color:white;
+    transition: color .2s;
+    font-size: 15px;
+
+}
+#footerLinks a:hover{
+    text-decoration:none;
+    color:#4180CB;
+}

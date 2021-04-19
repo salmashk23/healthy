@@ -1,0 +1,26 @@
+#myNavbar{
+    background-color:rgba(16, 5, 0, 0.5);
+    border: 2px solid white;
+  }
+#myNav li a {
+    color: white;
+    padding: 14px 16px;
+    font-family: 'Jura';
+    font-size: 15px;
+
+    }
+#myNav li a:hover {
+  background-color: #111;
+}
+
+.navbar {
+  justify-content: center;
+  align-items: center;
+
+}
+
+.active {
+  background: #fbfb09;
+  font-weight: 600;
+  text-transform: uppercase;
+}

@@ -1,0 +1,19 @@
+#head{
+    background: rgba(16, 5, 0, 0.5);
+    border: 2px solid white;
+    text-shadow:  4px 4px 4px #000000;
+    padding: 50px;
+}
+
+h1{
+     font-family: 'Shippori Mincho', serif;
+     font-size: 70px;
+     color: white;
+}
+
+
+h2{
+     font-family: 'Dancing Script', serif;
+     font-size: 60px;
+     color: #C66900;
+}

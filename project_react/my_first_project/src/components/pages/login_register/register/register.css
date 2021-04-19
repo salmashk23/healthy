@@ -1,0 +1,11 @@
+#logreg-content{
+    background: url("../login_register.jpg") center;
+    background-size: cover;
+    border: 2px solid pink;
+    border-radius: 5px;
+    font-family: 'Shippori Mincho';
+
+}
+#select{
+    height: 35px;
+}
