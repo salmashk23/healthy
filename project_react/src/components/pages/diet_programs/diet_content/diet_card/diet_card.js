@@ -26,12 +26,12 @@ class DietCard extends React.Component{
                             <Card className="cardd text-center" id="cardCaro" >
                                 <CardImg  src={item.image} alt="Card image cap"></CardImg>
                                 <CardBody>
-                                    <CardTitle className="text-dark mb-3" tag="h3">{item.title}</CardTitle>
+                                    <CardTitle className="mb-3" tag="h3">{item.title}</CardTitle>
                                     <CardText tag="h4">
                                             {item.summary}
                                     </CardText>
                                 </CardBody>
-                                <Button className="m-4 bg-dark"  id="more">More Info</Button>
+                                <Button className="m-4 btn-outline-light"  id="more">More Info</Button>
                             </Card>
                             </div>
                                 )

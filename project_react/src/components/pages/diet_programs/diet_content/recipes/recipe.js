@@ -28,13 +28,13 @@ class RecipeCard extends React.Component{
                             <Card className="cardd text-center" id="cardCaro" >
                                 <CardImg  src={item.image}  alt="Card image cap"></CardImg>
                                 <CardBody>
-                                    <CardTitle className="text-dark mb-3" tag="h3">{item.title}</CardTitle>
+                                    <CardTitle className=" mb-3" tag="h3">{item.title}</CardTitle>
                                     <CardText tag="h4">
                                             {item.summary}
                                     </CardText>
                                     <Rating/>
                                 </CardBody>
-                                <Button variant="outline-dark" className="m-4 p-0 " id="boton"><Modaling/></Button>
+                                <Modaling/>
                             </Card>
                             </div>
                                 )

@@ -15,7 +15,7 @@ export default function Try() {
 
   return (
     <div className="modall">
-      <Button onClick={toggleModal} >Try It</Button>
+        <Button onClick={toggleModal} className="btn-outline-light btn-block" id="more" >Try It</Button>
 
       <Modal
         isOpen={isOpen}

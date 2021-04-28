@@ -2,4 +2,11 @@
     width: 80%;
     margin-left: 10%;
 
+
+}
+
+#card-about{
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 15px;
 }

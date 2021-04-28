@@ -7,17 +7,17 @@ class BmiCard extends React.Component{
         render(){
             return(
                 <Col md="4" className="card-deck" >
-                    <Card className="my-4 p-3 ">
+                    <Card className="my-4 p-3 " id="cardCaro">
                         <CardImg src = {process.env.PUBLIC_URL + '/img/img_home/img-post/bmi1.jpg'} alt="Card image cap"/>
                         <CardBody>
-                            <CardTitle tag="h3">Bmi Calculator</CardTitle>
+                            <CardTitle tag="h3">BMI Calculator</CardTitle>
                             <CardText>
                                 Body mass index (BMI) is a measure of
                                 body fat based on height and weight that applies
                                 to adult men and women.
                             </CardText>
                         </CardBody>
-                        <Button variant="outline-dark" className="p-0"><Try/></Button>
+                        <Try/>
                     </Card>
 
                 </Col>

@@ -20,8 +20,8 @@ const MenuItems = [
         cName: 'nav-link'
     },
     {
-        title: 'ARTICALES',
-        url: '/articales',
+        title: 'ARTICLES',
+        url: '/articles',
         cName: 'nav-link'
     },
     {

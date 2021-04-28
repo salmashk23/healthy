@@ -1,9 +1,9 @@
-#boton a :hover{
-    text-decoration: none;
-
+.card-title{
+    color: #FFA15C;
 }
 
-#boton a {
-    color: white;
-    transition: color .2s;
+#cardCaro{
+    background: rgba(0, 0, 0 ,0.7)  ;
+    color: #E6F7FB  ;
+    font-family:  sans-serif;
 }

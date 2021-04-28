@@ -16,8 +16,8 @@ export default function Modaling() {
   }
 
   return (
-    <div className="modall">
-      <Button onClick={toggleModal} >More Info</Button>
+    <div className="modall container">
+      <Button onClick={toggleModal} className=" mb-4 btn-outline-light btn-block" id="more" > More Info</Button>
 
       <Modal
         isOpen={isOpen}

@@ -8,8 +8,8 @@ import "./carousel.css";
 class DemoCarousel extends React.Component{
     render(){
     return(
-        <div>
-            <h3 id="note" className="text-center">
+        <div className="container">
+            <h3 id="note" className="text-center text-center p-3 border">
                  <p>
                      Some of the people who "Healthy Weight"
                      changed their lives and there are many more <br/>

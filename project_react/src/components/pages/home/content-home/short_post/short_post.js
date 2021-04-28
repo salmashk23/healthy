@@ -10,7 +10,7 @@ class ShortPost extends React.Component{
     render(){
   return (
       <div>
-      <Row className="justify-content-center m-5" >
+      <Row className="justify-content-center my-3 " >
                 <TipPost/>
                 <ArticalePost />
                 <BmiCard/>

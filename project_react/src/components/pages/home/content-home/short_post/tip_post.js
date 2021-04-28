@@ -5,7 +5,7 @@ class TipPost extends React.Component{
         render(){
             return(
                 <Col md="4" className="card-deck" >
-                    <Card className="my-4 p-3 ">
+                    <Card className="my-4 p-3 "  id="cardCaro">
                         <CardImg src = {process.env.PUBLIC_URL + '/img/img_home/img-post/tip.jpg'} alt="Card image cap"/>
                         <CardBody>
                             <CardTitle tag="h3">Today's Tip</CardTitle>
