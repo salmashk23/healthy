@@ -6,6 +6,9 @@ import "./psych.css";
 
 
 class Notes extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         return (
 
@@ -19,7 +22,7 @@ class Notes extends React.Component{
                     interval={4000}
                     >
                     {
-                        DescPsych.map((item => {
+                        this.props.note.Note.map((item => {
                             return(
                                 <div className="m-5 p-5" id="caro-content">
                                     <h4 className="text-light display-4"> {item.content} </h4>

@@ -1,6 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var aboutcard = require("./about_items/card_items.json")
+var aboutext = require("./about_items/text_items.json")
 var footer = require('../../parts/footer/footer_controller.js')
 var header = require('../../parts/header/header_controller.js')
 
@@ -11,9 +12,16 @@ router.use(function timeLog (req, res, next) {
   next()
 })
 
+let Card =()=> {
+  return(aboutcard)
+}
+
+let Text =()=> {
+  return(aboutext)
+}
 
 let Content=()=>{
-  return (aboutcard)
+  return JSON.parse('{"Card":'+JSON.stringify(Card())+',"Text":'+JSON.stringify(Text())+"}")
 }
 
 

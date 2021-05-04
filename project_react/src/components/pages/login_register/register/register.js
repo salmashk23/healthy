@@ -6,6 +6,9 @@ import RegisterItems from "./register_items.js";
 import  "../login_register.css";
 
  export default class Register extends Component {
+     constructor(props) {
+     super(props);
+    }
     render() {
         return (
             <Row className=" justify-content-center mt-5">
@@ -15,7 +18,7 @@ import  "../login_register.css";
                         <h3 className="text-center h2">Register</h3>
                         <p className="text-center h4 mb-5">Lets Get You On Board</p>
                         <Row>
-                            {RegisterItems.map((item => {
+                            {this.props.content.map((item => {
                                 return(
                                     <Col md="6"  className="mb-4">
                                            <Label>{item.label}</Label>

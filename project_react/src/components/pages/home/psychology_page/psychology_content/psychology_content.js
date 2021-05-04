@@ -5,12 +5,15 @@ import Psycho from './psych.js';
 
 
 class PsychContent extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         return(
             <div className="container">
-                <Notes/>
+                <Notes note={this.props.content}/>
                 <h3 className="display-3 text-center mt-5" id="title" > Our Psychologists </h3>
-                <Psycho/>
+                <Psycho psych={this.props.content}/>
             </div>
         )
     }

@@ -11,8 +11,8 @@ class ContentAbout extends React.Component{
     render(){
         return(
             <div>
-                <TextAbout/>
-                <CardAbout content={this.props.content}/>
+                <TextAbout text={this.props.content}/>
+                <CardAbout card={this.props.content}/>
             </div>
         )
     }

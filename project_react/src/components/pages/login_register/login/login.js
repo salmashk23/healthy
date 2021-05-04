@@ -4,6 +4,9 @@ import LoginItems from "./login_items.js";
 import  "../login_register.css";
 
 export default class Login extends Component {
+    constructor(props) {
+    super(props);
+   }
     render() {
         return (
             <Row className=" justify-content-center m-5">
@@ -11,7 +14,7 @@ export default class Login extends Component {
                     <Form className="text-white p-5" id="logreg-content">
                         <h3 className="text-center h2">LOG IN</h3>
                         <p className="text-center h4 mb-5">Welcome Back, Please Login To Your Account</p>
-                         {LoginItems.map((item => {
+                         {this.props.content.map((item => {
                              return(
                             <FormGroup  check={item.check}>
                                 <Label id={item.id} check={item.check} >{item.label}</Label>

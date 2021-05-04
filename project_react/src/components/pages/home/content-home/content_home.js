@@ -12,9 +12,9 @@ class ContentHome extends React.Component{
     render(){
         return(
             <div className="container">
+                <Psycho/>
                 <ShortPost/>
                 <DemoCarousel carousel={this.props.content}/>
-                <Psycho/>
             </div>
         )
     }
