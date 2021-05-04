@@ -1,6 +1,6 @@
 const NewItems = [
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article.jpg',
+        image: '/img/img-articale/article.jpg',
         title: 'Weight loss may reduce our vulnerability to food marketing',
         summary: 'One of the factors behind the steep rise in obesity rates may'+
         ' be the intensive marketing of high calorie, nutrient-poor food'+
@@ -10,7 +10,7 @@ const NewItems = [
 
     },
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article.jpg',
+        image:  '/img/img-articale/article.jpg',
         title: '50 foods and drinks to avoid for people with high blood pressure',
         summary: 'Having high blood pressure does not necessarily mean a person has'+
         'to eliminate specific foods from their diet. Rather than trying to cut these...',
@@ -19,7 +19,7 @@ const NewItems = [
     },
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article.jpg',
+        image:  '/img/img-articale/article.jpg',
         title: '5 Tips for Overcoming Medication Stigma with Type 2 Diabetes',
         summary: 'Though I’ve been living with type 2 diabetes since 2000,'+
         ' it’s only in the last couple of years that I’ve become hyperaware of...',
@@ -28,7 +28,7 @@ const NewItems = [
     },
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article.jpg',
+        image: '/img/img-articale/article.jpg',
         title: 'COVID-19, Vaccines and Body Weight',
         summary: 'FOR AS MUCH AS SHE wanted to get the COVID-19 vaccine as soon'+
         ' as possible, qualifying because of her weight was an uncomfortable'+
@@ -39,7 +39,7 @@ const NewItems = [
 
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article.jpg',
+        image:  '/img/img-articale/article.jpg',
         title: 'How To Pick A Workout Based On What Your Body *Actually* Needs',
         summary: "I've learned from experience that when scheduling exercise, it's"+
         ' best to keep it vague. Adding make time for movement to my list of ',

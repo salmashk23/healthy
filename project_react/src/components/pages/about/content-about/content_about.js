@@ -5,11 +5,14 @@ import CardAbout from './cards_about/card_about.js';
 
 
 class ContentAbout extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         return(
             <div>
                 <TextAbout/>
-                <CardAbout/>
+                <CardAbout content={this.props.content}/>
             </div>
         )
     }

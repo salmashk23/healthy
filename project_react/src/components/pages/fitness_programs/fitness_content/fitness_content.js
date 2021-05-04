@@ -6,11 +6,13 @@ import CarouselVideo  from "./carousel_video/carousel_video.js"
 
 
 class FitnessContent extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         return (
             <div>
-                <CarouselVideo />
-
+                <CarouselVideo video={this.props.content} />
             </div>
         );
       };

@@ -6,17 +6,20 @@ import RecipeCard from "./recipes/recipe.js";
 import "./diet_content.css";
 
 class DietContent extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         return(
             <Container>
                 <h3 className="display-3 text-center mt-5" id="title">
                   Diet Programs
                 </h3>
-                <DietCard/>
+                <DietCard diet={this.props.content}/>
                 <h3 className="display-3 text-center mt-5" id="title">
                       Recipes
                 </h3>
-                <RecipeCard/>
+                <RecipeCard recipe={this.props.content}/>
             </Container>
             );
         }

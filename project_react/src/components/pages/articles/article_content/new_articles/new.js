@@ -6,6 +6,9 @@ import NewItems from "./new_items.js";
 import "../../../../general/card_carousel/card_carousel.css";
 
 class NewCard extends React.Component{
+    constructor(props){
+        super(props)
+    }
         render(){
             const settings = {
 
@@ -18,7 +21,7 @@ class NewCard extends React.Component{
             return(
                 <Container>
                     <Slider {...settings}>
-                    {NewItems.map((item => {
+                    {this.props.new.New.map((item => {
                         return(
                             <div className="card-deck">
                                 <Card className="cardd text-center p-3" id="cardCaro" >

@@ -1,6 +1,6 @@
 const DietItems = [
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat1.jpg',
+        image:  '/img/img-diet/eat1.jpg',
         title: 'Intermittent Fasting',
         subtitle:'1',
         summary: 'Intermittent fasting cycles between periods of fasting'+
@@ -8,7 +8,7 @@ const DietItems = [
         ' many other health benefits.'
     },
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat2.jpg',
+        image:  '/img/img-diet/eat2.jpg',
         title: 'Plant-Based Diets',
         summary: 'Plant-based diets restrict meat and animal products for'+
          'various reasons. Studies show that they aid weight loss by reducing'+
@@ -16,7 +16,7 @@ const DietItems = [
     },
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat3.jpg',
+        image: '/img/img-diet/eat3.jpg',
         title: 'Low-Carb Diets',
         summary: 'Low-carb diets restrict your carb intake, which encourages'+
         ' your body to use more fat as fuel. They can help you lose weight'+
@@ -24,7 +24,7 @@ const DietItems = [
     },
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat4.jpg',
+        image:  '/img/img-diet/eat4.jpg',
         title: 'The Paleo Diet',
         summary: 'The paleo diet advocates eating whole foods, similarly to '+
         'how your ancestors ate. Studies show that it may aid weight loss'+
@@ -32,7 +32,7 @@ const DietItems = [
     },
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat5.jpg',
+        image:  '/img/img-diet/eat5.jpg',
         title: 'Low-Fat Diets',
         summary: 'Low-fat diets restrict your intake of fat, as this'+
         ' macronutrient is higher in calories than protein and carbs.'+
@@ -40,7 +40,7 @@ const DietItems = [
         ' risks of heart disease and diabetes.'
     },
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat6.jpg',
+        image:'/img/img-diet/eat6.jpg',
         title: 'The Mediterranean diet',
         summary: 'The Mediterranean diet emphasizes eating plenty of fruits,'+
         ' vegetables, fish, and healthy oils while restricting refined and'+
@@ -48,7 +48,7 @@ const DietItems = [
         ' show that it can promote weight loss and overall health.'
     },
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat8.jpg',
+        image:  '/img/img-diet/eat8.jpg',
         title: 'The DASH Diet',
         summary: 'The DASH diet is a low-salt diet that has been shown to aid'+
         ' weight loss. Studies have also linked it to additional benefits'+
@@ -56,14 +56,14 @@ const DietItems = [
     },
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat7.jpg',
+        image: '/img/img-diet/eat7.jpg',
         title: 'WW (Weight Watchers)',
         summary: 'WW, or Weight Watchers, is a weight loss program that uses'+
         'a points-based system. Studies show that it’s effective for long-term'+
         'weight loss and highly flexible.'
     },
     {
-        image: process.env.PUBLIC_URL + '/img/img-diet/eat9.jpg',
+        image: '/img/img-diet/eat9.jpg',
         title: 'The Mayo Clinic Diet',
         summary: ' The Mayo Clinic Diet is designed to help you reshape your lifestyle'+
         ' by adopting healthy new habits and breaking unhealthy old ones.'+

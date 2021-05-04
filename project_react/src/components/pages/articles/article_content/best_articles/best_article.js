@@ -6,6 +6,9 @@ import BestItems from "./best_items.js";
 import "../../../../general/card_carousel/card_carousel.css";
 
 class BestCard extends React.Component{
+    constructor(props){
+        super(props)
+    }
         render(){
             const settings = {
 
@@ -18,7 +21,7 @@ class BestCard extends React.Component{
             return(
                 <Container>
                     <Slider {...settings}>
-                    {BestItems.map((item => {
+                    {this.props.best.Best.map((item => {
                         return(
                             <div className="card-deck">
                                 <Card className="cardd text-center p-3" id="cardCaro" >

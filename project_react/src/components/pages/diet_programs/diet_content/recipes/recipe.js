@@ -10,6 +10,9 @@ import Rating from "../../../../general/rating/rating.js";
 
 
 class RecipeCard extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         const settings = {
 
@@ -22,11 +25,11 @@ class RecipeCard extends React.Component{
         return(
             <Container className="cards-container" >
                 <Slider {...settings}>
-                {RecipeItems.map((item => {
+                {this.props.recipe.Recipe.map((item => {
                     return(
                         <div className="card-deck">
                             <Card className="cardd text-center" id="cardCaro" >
-                                <CardImg  src={item.image}  alt="Card image cap"></CardImg>
+                                <CardImg  src={process.env.PUBLIC_URL + item.image}  alt="Card image cap"></CardImg>
                                 <CardBody>
                                     <CardTitle className=" mb-3" tag="h3">{item.title}</CardTitle>
                                     <CardText tag="h4">

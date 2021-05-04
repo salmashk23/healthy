@@ -6,6 +6,9 @@ import "./carousel.css";
 
 
 class DemoCarousel extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
     return(
         <div className="container">
@@ -19,9 +22,9 @@ class DemoCarousel extends React.Component{
             </h3>
             <Carousel autoPlay={true} infiniteLoop={true} showStatus={false} showThumbs={false}>
                 {
-                    CarouselItems.map((item => {
+                    this.props.carousel.map((item => {
                         return(
-                            <img src={item.image}  className="sliderimg" alt={item.alt}/>
+                            <img src={process.env.PUBLIC_URL + item.image}  className="sliderimg" alt={item.alt}/>
                                 )
                             }
                         )

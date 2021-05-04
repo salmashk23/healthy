@@ -6,11 +6,14 @@ import Psycho from './psychology/psycho.js';
 
 
 class ContentHome extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         return(
             <div className="container">
                 <ShortPost/>
-                <DemoCarousel/>
+                <DemoCarousel carousel={this.props.content}/>
                 <Psycho/>
             </div>
         )

@@ -5,12 +5,15 @@ import "./footer_center.css";
 
 
 class FooterCenter extends React.Component {
+    constructor(props){
+        super(props)
+    }
 
     render() {
         return (
                 <Col md="4" className="text-center">
                   <h5 id="link-menu" className="title">Menu</h5>
-                  <FooterLinks/>
+                  <FooterLinks footerCenter={this.props.footerCenter}/>
                 </Col>
         );
     }

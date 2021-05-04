@@ -8,6 +8,9 @@ import "../../../../general/card_carousel/card_carousel.css";
 
 
 class DietCard extends React.Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         const settings = {
 
@@ -20,11 +23,11 @@ class DietCard extends React.Component{
         return(
             <Container className="cards-container" >
                 <Slider {...settings}>
-                {DietItems.map((item => {
+                {this.props.diet.Diet.map((item => {
                     return(
                         <div className="card-deck">
                             <Card className="cardd text-center" id="cardCaro" >
-                                <CardImg  src={item.image} alt="Card image cap"></CardImg>
+                                <CardImg  src={process.env.PUBLIC_URL + item.image} alt="Card image cap"></CardImg>
                                 <CardBody>
                                     <CardTitle className="mb-3" tag="h3">{item.title}</CardTitle>
                                     <CardText tag="h4">

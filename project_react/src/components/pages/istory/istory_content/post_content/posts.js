@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import { Button, Input, FormGroup , Form, Label, Col, Row } from 'reactstrap';
-import PostItems from "./post_items.js";
+// import PostItems from "./post_items.js";
 import "./post.css";
 
 export default class Post extends Component {
+    constructor(props) {
+    super(props);
+  }
+
     render() {
         return (
             <Row className=" justify-content-center mt-5">
@@ -12,7 +16,7 @@ export default class Post extends Component {
 
                         <h3 className="text-center h2">Create Post</h3>
 
-                            {PostItems.map((item => {
+                            {this.props.post.Post.map((item => {
                                 return(
                                     <div className="m-4">
 

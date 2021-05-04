@@ -8,13 +8,17 @@ import FooterBottom from "./footer_bottom/footer_bottom.js";
 import "./footer.css";
 
 class Footer extends React.Component {
-    render() {
+    constructor(props) {
+    super(props);
+  }
+  render(){
+      console.log(this.props.footerLeft)
         return (
             <footer id="footer" className="font-small pt-4 mt-4">
                   <Container fluid className="text-center text-md-left">
                         <Row>
-                              <FooterLeft/>
-                              <FooterCenter/>
+                              <FooterLeft footerLeft={this.props.footerData}/>
+                              <FooterCenter footerCenter={this.props.footerData}/>
                               <FooterRight/>
                         </Row>
                   </Container>

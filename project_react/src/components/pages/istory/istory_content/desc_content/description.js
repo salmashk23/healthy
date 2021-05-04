@@ -1,11 +1,17 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import  DescItems from './desc_items.js';
+// import  DescItems from './desc_items.js';
 import "./description.css";
+// import  Desc from './istory_items.json'
 
 
 export default class DescStory extends React.Component{
+    constructor(props) {
+    super(props);
+
+  }
     render(){
+        console.log("hell")
         return (
                 <Carousel
                     autoPlay={true}
@@ -17,7 +23,7 @@ export default class DescStory extends React.Component{
                     interval={4000}
                     >
                     {
-                        DescItems.map((item => {
+                        this.props.desc.Desc.map((item => {
                             return(
                                 <div className="m-5 p-5" id="carousel-content">
                                     <h1 className="display-2"> {item.title} </h1>

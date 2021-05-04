@@ -6,10 +6,13 @@ import Logo from '../../general/logo/logo.js';
 
 
 class Header extends React.Component{
+    constructor(props) {
+    super(props);
+  }
     render(){
         return(
             <div className="container-fluid">
-                <Menu/>
+                <Menu menu={this.props.header}/>
                 <Logo/>
             </div>
         )

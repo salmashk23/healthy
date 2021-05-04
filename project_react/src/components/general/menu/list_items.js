@@ -5,8 +5,11 @@ import ListItem from './list_item.js';
 
 
 class ListItems extends React.Component{
+    constructor(props) {
+    super(props);
+  }
     render(){
-        const ListItems = MenuItems.map((jsonPart) => (
+        const ListItems = this.props.menu.map((jsonPart) => (
             <ListItem item={jsonPart} /> ));
 
         return(

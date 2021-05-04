@@ -5,11 +5,14 @@ import ListItems from './list_items.js';
 import './menu.css';
 
 class Menu extends React.Component{
+    constructor(props) {
+    super(props);
+  }
     render(){
         return(
 
                 <nav  id="myNavbar" className="navbar navbar-expand fixed-top" >
-                    <ListItems/>
+                    <ListItems menu={this.props.menu}/>
                     <SearchBar/>
                 </nav>
 

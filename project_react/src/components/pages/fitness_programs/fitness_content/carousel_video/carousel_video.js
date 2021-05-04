@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import {Container} from "reactstrap";
 import ReactPlayer  from 'react-player';
 import "react-multi-carousel/lib/styles.css";
+import VideoItems from "./video_items";
 import "./carousel_video.css";
 
 const responsive = {
@@ -24,6 +25,9 @@ const responsive = {
 };
 
 class CarouselVideo extends React.Component {
+    constructor(props) {
+    super(props);
+    }
   render() {
     return (
           <Container>
@@ -36,10 +40,15 @@ class CarouselVideo extends React.Component {
                  responsive={responsive}
                  showDots={true}
                  className="caru">
-                <ReactPlayer  url='https://youtu.be/AV2GRKU_PHk' width={480} controls />
-                <ReactPlayer  url='https://youtu.be/3sEeVJEXTfY' width={480} controls />
-                <ReactPlayer  url='https://youtu.be/AV2GRKU_PHk'  width={480} controls />
-                <ReactPlayer  url='https://youtu.be/3sEeVJEXTfY' width={480} controls />
+                     {
+                         this.props.video.map((item) => {
+                             return(
+                                 <ReactPlayer  url={item.video} width={480} controls />
+
+                             )
+                     }
+                 )
+             }
             </Carousel>
         </Container>
     );

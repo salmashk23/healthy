@@ -1,6 +1,6 @@
 const BestItems = [
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article1.jpg',
+        image:  '/img/img-articale/article1.jpg',
         title: 'Maintaining health while working from home: 8 tips',
         summary: "Working from home can be beneficial in many ways, but"+
         " it can also present several physical, mental, and social challenges.",
@@ -9,7 +9,7 @@ const BestItems = [
 
     },
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article1.jpg',
+        image:  '/img/img-articale/article1.jpg',
         title: 'Study suggests drinking coffee before exercise may help burn more fat',
         summary: 'Caffeine is a stimulant that occurs naturally in coffee beans,'+
         ' tea leaves, and cocoa beans. Commercial energy drinks, snacks,'+
@@ -19,7 +19,7 @@ const BestItems = [
     },
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article1.jpg',
+        image:  '/img/img-articale/article1.jpg',
         title: '5 Tips for Overcoming Medication Stigma with Type 2 Diabetes',
         summary: 'Though I’ve been living with type 2 diabetes since 2000,'+
         ' it’s only in the last couple of years that I’ve become hyperaware of...',
@@ -28,7 +28,7 @@ const BestItems = [
     },
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article.jpg',
+        image:  '/img/img-articale/article.jpg',
         title: 'COVID-19, Vaccines and Body Weight',
         summary: 'FOR AS MUCH AS SHE wanted to get the COVID-19 vaccine as soon'+
         ' as possible, qualifying because of her weight was an uncomfortable'+
@@ -39,7 +39,7 @@ const BestItems = [
 
 
     {
-        image: process.env.PUBLIC_URL + '/img/img-articale/article.jpg',
+        image: '/img/img-articale/article.jpg',
         title: 'How To Pick A Workout Based On What Your Body *Actually* Needs',
         summary: "I've learned from experience that when scheduling exercise, it's"+
         ' best to keep it vague. Adding make time for movement to my list of ',
