@@ -1,22 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {Card, CardImg, CardBody, CardTitle, CardText, CardDeck, Container } from 'reactstrap';
+import {Card, CardImg, CardBody, CardTitle, CardText, Container } from 'reactstrap';
 import "./card_about.css";
-// import CardItems from "./card_items.js";
 
 class CardAbout extends React.Component{
-    constructor(props) {
-    super(props);
-
-  }
-
     render(){
         return(
             <Container>
                 <div className="card-deck car">
-                        {this.props.card.Card.map((item => {
+                        {this.props.card.Card.map((item,i) => {
                                 return(
-                                        <Card className="my-4 p-3" id="card-about">
+                                        <Card key={i} className="my-4 p-3" id="card-about">
                                             <CardImg  src={process.env.PUBLIC_URL + item.image} alt="Card image cap"></CardImg>
                                             <CardBody>
                                                  <CardTitle tag="h3">{item.title}</CardTitle>
@@ -28,8 +21,7 @@ class CardAbout extends React.Component{
                                     )
                                 }
                             )
-                        )
-                    }
+                        }
                 </div>
             </Container>
                 );

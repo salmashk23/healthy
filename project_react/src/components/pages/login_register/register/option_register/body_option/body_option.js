@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, FormGroup , Label, Row, Col  } from 'reactstrap';
-import BodyItems from "./body_items.js";
+import { Form, Input, FormGroup , Row, Col  } from 'reactstrap';
 
 
  export default class BodyOption extends Component {
@@ -8,10 +7,10 @@ import BodyItems from "./body_items.js";
         return (
             <Form className="mt-3" >
                 <Row>
-                    {BodyItems.map((item => {
+                    {this.props.body.Body.map((item,i) => {
                         return(
 
-                            <Col md="6" className="mb-2" >
+                            <Col md="6" key={i} className="mb-2" >
                                <FormGroup className="text-white" >
 
                                        <h5> {item.title} </h5> <Input type="number" required/>
@@ -25,8 +24,7 @@ import BodyItems from "./body_items.js";
                                        )
                                    }
                                )
-                           )
-                       }
+                          }
                </Row>
             </Form>
         );

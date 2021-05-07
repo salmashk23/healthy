@@ -1,27 +1,17 @@
 var express = require('express')
-var router = express.Router()
-var login = require("./login_items.json")
-var footer = require('../../../parts/footer/footer_controller.js')
-var header = require('../../../parts/header/header_controller.js')
+var router = express.Router();
+var loginDb =require("./login_db.js")
 
 
-// middleware that is specific to this router
-router.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
-  next()
-})
+// define the login page route
 
+router.get('/login', loginDb.LoginPage)
 
-let Content=()=>{
-  return (login)
-}
+router.post('/login', (req, res) => {
+  // Insert Login Code Here
+  let email = req.body.email;
+  let password = req.body.password;
+  res.send(`E-mail: ${email} Password: ${password}`);
+});
 
-
-let LoginPageJson=()=>{
-    return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
-}
-
-
-module.exports.LoginPage = (req,res)=>{
-      res.json(LoginPageJson())
-    }
+module.exports = router

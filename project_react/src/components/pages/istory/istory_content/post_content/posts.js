@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import { Button, Input, FormGroup , Form, Label, Col, Row } from 'reactstrap';
+import { Button, Input, Form, Label, Col, Row } from 'reactstrap';
 // import PostItems from "./post_items.js";
 import "./post.css";
 
 export default class Post extends Component {
-    constructor(props) {
-    super(props);
-  }
-
     render() {
         return (
             <Row className=" justify-content-center mt-5">

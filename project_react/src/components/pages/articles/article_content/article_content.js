@@ -1,14 +1,10 @@
 import React from 'react';
-import ReactPlayer  from 'react-player';
-import {Container, Card, CardImg, CardTitle, CardBody, CardText ,Button , Col, Row} from 'reactstrap';
+import {Container} from 'reactstrap';
 import NewCard from "./new_articles/new.js";
 import BestCard from "./best_articles/best_article.js";
 
 
 class ArticleContent extends React.Component{
-    constructor(props){
-        super(props)
-    }
     render(){
         return (
             <Container>

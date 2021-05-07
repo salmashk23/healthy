@@ -1,12 +1,8 @@
-import React, { Component } from "react";
-import { Container, Button, Input, FormGroup , Form, Label, Col, Row } from 'reactstrap';
-import LoginItems from "./login_items.js";
+import React from "react";
+import {  Button, Input, FormGroup , Form, Label, Col, Row } from 'reactstrap';
 import  "../login_register.css";
 
-export default class Login extends Component {
-    constructor(props) {
-    super(props);
-   }
+export default class Login extends React.Component {
     render() {
         return (
             <Row className=" justify-content-center m-5">

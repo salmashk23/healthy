@@ -1,14 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {Container, Card, CardBody, CardTitle, CardText,CardFooter, Button ,CardImg} from 'reactstrap';
+import {Container, Card, CardBody, CardTitle, CardText, Button ,CardImg} from 'reactstrap';
 import Slider from "react-slick";
-import BestItems from "./best_items.js";
 import "../../../../general/card_carousel/card_carousel.css";
 
 class BestCard extends React.Component{
-    constructor(props){
-        super(props)
-    }
         render(){
             const settings = {
 
@@ -21,9 +16,9 @@ class BestCard extends React.Component{
             return(
                 <Container>
                     <Slider {...settings}>
-                    {this.props.best.Best.map((item => {
+                    {this.props.best.Best.map((item,i) => {
                         return(
-                            <div className="card-deck">
+                            <div key={i} className="card-deck">
                                 <Card className="cardd text-center p-3" id="cardCaro" >
                                     <CardImg  src={process.env.PUBLIC_URL + '/img/img-article/best.jpg'} alt="Card image cap"></CardImg>
                                     <CardBody>
@@ -40,8 +35,7 @@ class BestCard extends React.Component{
                                     )
                                 }
                             )
-                        )
-                    }
+                        }
                     </Slider>
                 </Container>
                 );

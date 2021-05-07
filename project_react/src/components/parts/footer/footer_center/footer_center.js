@@ -5,10 +5,6 @@ import "./footer_center.css";
 
 
 class FooterCenter extends React.Component {
-    constructor(props){
-        super(props)
-    }
-
     render() {
         return (
                 <Col md="4" className="text-center">

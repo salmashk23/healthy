@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal  from "react-modal";
-import {Button , ModalHeader, ModalBody, ModalFooter} from "reactstrap";
+import {Button , ModalHeader, ModalBody} from "reactstrap";
 import BmiCalc from "./bmi_calc.js";
 import "../../../../../../components/general/modal/modal_card.css";
 

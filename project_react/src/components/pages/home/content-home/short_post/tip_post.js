@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardImg, CardTitle, CardText, Button, Col, Row} from "reactstrap";
+import { Card, CardBody, CardImg, CardTitle, CardText, Col } from "reactstrap";
 
 class TipPost extends React.Component{
         render(){

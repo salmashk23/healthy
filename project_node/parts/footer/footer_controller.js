@@ -3,7 +3,7 @@ var router = express.Router();
 var footericon = require('../../parts/footer/footer_items/footer_icons.json')
 var footermenu = require('../../parts/footer/footer_items/footer_menu_item.json')
 
-// define the istory page route
+// define the footer route
 
 let Icons =()=> {
   return(footericon)

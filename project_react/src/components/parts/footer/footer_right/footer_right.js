@@ -8,12 +8,12 @@ class FooterRight extends React.Component {
         return (
                 <Col md="4" className="text-center">
                   <h5 className="title" id="contact"> <a href="/contact_us"> Contact Us </a> </h5>
-                  <p class="mb-0">
-                      <i class="fa fa-phone mr-3"></i>
+                  <p className="mb-0">
+                      <i className="fa fa-phone mr-3"></i>
                       052-666-5000
                   </p>
                   <p>
-                      <i class="fa fa-envelope-o mr-3"></i>
+                      <i className="fa fa-envelope-o mr-3"></i>
                       HealthyWeight@gmail.com
                   </p>
                 </Col>

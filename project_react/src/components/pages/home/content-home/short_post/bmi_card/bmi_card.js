@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardImg, CardTitle, CardText, Button, Col, Row} from "reactstrap";
-import BmiCalc from "./bmi_calc.js";
+import { Card, CardBody, CardImg, CardTitle, CardText , Col } from "reactstrap";
 import Try from "./try_modal.js";
 
 class BmiCard extends React.Component{

@@ -15,18 +15,18 @@ var register = require('./pages/login_register/register/register_controller.js')
 var login = require('./pages/login_register/login/login_controller.js');
 
 
-app.get('/home', home.HomePage)
-app.use('/about(us)?', about.AboutPage)
-app.use('/diet(programs)?', dietprograms.DietPage)
-app.use('/fitness(programs)?', fitnessprograms.FitnessPage)
-app.use('/contact(us)?', contactus.ContactPage)
-app.use('/articles', articles.ArticlesPage )
-app.use('/istory', istory.IstoryPage)
-app.use('/psych(o)?', psycho.PsychoPage)
-app.use('/login', login.LoginPage)
-app.use('/register', register.RegisterPage)
+app.get('/home', home)
+app.get('/about(us)?', about)
+app.get('/diet(programs)?', dietprograms)
+app.get('/fitness(programs)?', fitnessprograms)
+app.get('/contact(us)?', contactus)
+app.get('/article(s)?', articles)
+app.get('/istory', istory)
+app.get('/login', login)
+app.get('/register', register)
+app.get('/psych(o)?', psycho)
 
 
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}!`)
+  console.log(`Healthy Weight App on port ${PORT}!`)
 });

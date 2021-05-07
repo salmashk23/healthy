@@ -1,15 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
-
-import PsychItems from "./psych_items.js";
-
 
 
 class Psycho extends React.Component{
-    constructor(props){
-        super(props)
-    }
     render(){
         return(
                 <div className="card-deck ml-5 mr-5">

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import { Input,Label, Button, Col, Row} from "reactstrap";
+import React from "react";
+import { Input , Label , Button } from "reactstrap";
 import "./bmi_calc.css";
 
 class BmiCalc extends React.Component {
@@ -22,17 +21,17 @@ class BmiCalc extends React.Component {
 
     console.log(this.state.bmi);
 
-    let status = "";
+    
     let resultDisplay =
         (this.state.bmi < 18.5)
-             ? (status = <p>UnderWeight</p>)
+             ? (<p>UnderWeight</p>)
              : (this.state.bmi >= 18.5 && this.state.bmi < 24.9)
-                    ? (status = <p>Normal Wieght</p>)
+                    ? ( <p>Normal Wieght</p>)
                     : (this.state.bmi >= 25 &&  this.state.bmi < 29.9)
-                        ? (status = <p>OverWieght</p>)
+                        ? (<p>OverWieght</p>)
                         : (this.state.bmi >= 30 &&  this.state.bmi < 39.9)
-                            ? (status = <p>Obesity</p>)
-                            :(status = <p>NaN</p>);
+                            ? (<p>Obesity</p>)
+                            :( <p>NaN</p>);
 
 
     this.setState({

@@ -1,14 +1,27 @@
-// const databases = require('./about_card_item/card_items.json');
-//
-// // print all databases
-// databases.forEach(db => {
-//     console.log(`${db.image}: ${db.title}: ${db.text}`);
-// });
+var aboutcard = require("./about_items/card_items.json")
+var aboutext = require("./about_items/text_items.json")
+var footer = require('../../parts/footer/footer_controller.js')
+var header = require('../../parts/header/header_controller.js')
 
-var express = require('express')
-var router = express.Router()
-router.get('/card_items', function (req, res) {
-  return res.json(card_items);
-});
 
-module.exports = router
+let Card =()=> {
+  return(aboutcard)
+}
+
+let Text =()=> {
+  return(aboutext)
+}
+
+let Content=()=>{
+  return JSON.parse('{"Card":'+JSON.stringify(Card())+',"Text":'+JSON.stringify(Text())+"}")
+}
+
+
+let AboutPageJson=()=>{
+    return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
+}
+
+
+module.exports.AboutPage = (req,res)=>{
+      res.json(AboutPageJson())
+    }

@@ -1,13 +1,9 @@
 import React from "react";
 import { Col } from "reactstrap";
-import IconItems from "./footer_icons.js";
 import "./footer_left.css";
 
 
 class FooterLeft extends React.Component {
-    constructor(props){
-        super(props)
-    }
     render() {
         return (
                   <Col md="4" className="text-center">
@@ -15,17 +11,17 @@ class FooterLeft extends React.Component {
                     <h4 id="subtitle"> for a healthier life </h4>
                     <p id="icon">
                     {
-                        this.props.footerLeft.Icons.map((item => {
+                        this.props.footerLeft.Icons.map((item,i) => {
                             return(
-                                <li>
-                                    <a href={item.url}><i className={item.cName}></i>
+                                <li key={i} >
+                                    <a href={item.url}>
+                                        <i  className={item.cName}></i>
                                     </a>
                                 </li>
                                     )
                                 }
                             )
-                        )
-                    }
+                        }
                      </p>
                   </Col>
 

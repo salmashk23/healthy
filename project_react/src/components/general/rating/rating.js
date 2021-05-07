@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDom from "react-dom";
 import StarRatings from 'react-star-ratings';
 
 class Rating extends React.Component {

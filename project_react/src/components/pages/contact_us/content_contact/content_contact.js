@@ -1,14 +1,10 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-import { Container, Button, Input, FormGroup , Col, Row, Form, Label } from 'reactstrap';
-import ContactItems from "./contact_items.js"
+import { Button, Input, FormGroup , Col, Row, Form, Label } from 'reactstrap';
+
 import './content_contact.css';
 
 
 class ContentContact extends React.Component{
-    constructor(props){
-        super(props);
-    }
   render(){
       return (
               <Row className=" justify-content-center">

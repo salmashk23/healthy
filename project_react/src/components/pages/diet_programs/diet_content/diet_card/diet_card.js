@@ -1,16 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Container, Card, CardBody, CardTitle, CardText, Button ,CardImg} from 'reactstrap';
 import Slider from "react-slick";
-import DietItems from "./diet_items.js";
 import "../../../../general/card_carousel/card_carousel.css";
 
 
 
 class DietCard extends React.Component{
-    constructor(props){
-        super(props)
-    }
     render(){
         const settings = {
 
@@ -23,9 +18,9 @@ class DietCard extends React.Component{
         return(
             <Container className="cards-container" >
                 <Slider {...settings}>
-                {this.props.diet.Diet.map((item => {
+                {this.props.diet.Diet.map((item,i) => {
                     return(
-                        <div className="card-deck">
+                        <div key={i} className="card-deck">
                             <Card className="cardd text-center" id="cardCaro" >
                                 <CardImg  src={process.env.PUBLIC_URL + item.image} alt="Card image cap"></CardImg>
                                 <CardBody>
@@ -40,8 +35,7 @@ class DietCard extends React.Component{
                                 )
                             }
                         )
-                    )
-                }
+                    }
                 </Slider>
             </Container>
             );

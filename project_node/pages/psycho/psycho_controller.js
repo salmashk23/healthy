@@ -1,30 +1,11 @@
 var express = require('express')
 var router = express.Router();
-var psychdesc = require('./psycho_items/desc_psych.json')
-var psychitem = require('./psycho_items/psycho_items.json')
-var footer = require('../../parts/footer/footer_controller.js')
-var header = require('../../parts/header/header_controller.js')
-
-// define the articles page route
-
-let Note =()=> {
-  return(psychdesc)
-}
-
-let Psych =()=> {
-  return(psychitem)
-}
-
-let Content=()=>{
-  return JSON.parse('{"Note":'+JSON.stringify(Note())+',"Psych":'+JSON.stringify(Psych())+"}")
-}
+var psychoDb =require("./psycho_db.js")
 
 
-let PsychoPageJson=()=>{
-    return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
-}
+// define the psycho page route
+
+router.get('/psych(o)?', psychoDb.PsychoPage)
 
 
-module.exports.PsychoPage = (req,res)=>{
-      res.json(PsychoPageJson())
-    }
+module.exports = router

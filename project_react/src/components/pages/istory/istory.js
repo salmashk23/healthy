@@ -16,8 +16,7 @@ class Istory extends React.Component {
       .then(json => this.setState({ data: json }));
   }
     render(){
-        console.log(this.state.data)
-        if (this.state.data.length==0)
+        if (this.state.data.length===0)
             return (<p>ops</p>);
 
         return (

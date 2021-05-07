@@ -1,27 +1,9 @@
 var express = require('express')
-var router = express.Router()
-var contact = require("./contact_us_items/contact_items.json")
-var footer = require('../../parts/footer/footer_controller.js')
-var header = require('../../parts/header/header_controller.js')
+var router = express.Router();
+var contactDb =require("./contact_us_db.js")
 
+// define the contactus page route
 
-// middleware that is specific to this router
-router.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
-  next()
-})
+router.get('/contact(us)?', contactDb.ContactPage)
 
-
-let Content=()=>{
-  return (contact)
-}
-
-
-let ContactPageJson=()=>{
-    return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
-}
-
-
-module.exports.ContactPage = (req,res)=>{
-      res.json(ContactPageJson())
-    }
+module.exports = router

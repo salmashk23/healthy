@@ -3,13 +3,15 @@
       "label":"Name",
       "type":"text",
       "cName":"form-control",
-      "placeholder":"Enter Your Name"
+      "placeholder":"Enter Your Name",
+      "value": "name"
    },
    {
       "label":"E-mail",
       "type":"email",
       "cName":"form-control",
-      "placeholder":"Enter Your E-mail"
+      "placeholder":"Enter Your E-mail",
+      "value":"email"
    },
    {
       "label":"Password",

@@ -1,14 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Carousel } from 'react-responsive-carousel';
-import  DescPsych from './desc_psych.js';
 import "./psych.css";
 
 
 class Notes extends React.Component{
-    constructor(props){
-        super(props)
-    }
     render(){
         return (
 

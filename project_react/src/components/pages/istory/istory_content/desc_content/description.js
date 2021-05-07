@@ -1,15 +1,10 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-// import  DescItems from './desc_items.js';
 import "./description.css";
-// import  Desc from './istory_items.json'
+
 
 
 export default class DescStory extends React.Component{
-    constructor(props) {
-    super(props);
-
-  }
     render(){
         console.log("hell")
         return (
