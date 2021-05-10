@@ -15,9 +15,9 @@
         "id":"select",
         "name":"Who can see your post?",
         "value_1":"1",
-        "name_1":"Public (anyone on or off healthyweight)",
+        "name_1":"Public  (anyone on or off healthyweight)",
         "value_2":"2",
-        "name_2":"Users (only users of healthyweight )"
+        "name_2":"Users   (only users of healthyweight )"
     },
     {
         "label": "Choose file",

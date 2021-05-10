@@ -20,11 +20,6 @@ let Content=()=>{
 }
 
 
-let ArticlesPageJson=()=>{
+module.exports.ArticlesPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.ArticlesPage = (req,res)=>{
-      res.json(ArticlesPageJson())
-    }

@@ -19,11 +19,6 @@ let Content=()=>{
 }
 
 
-let IstoryPageJson=()=>{
+module.exports.IstoryPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.IstoryPage = (req,res)=>{
-      res.json(IstoryPageJson())
-    }

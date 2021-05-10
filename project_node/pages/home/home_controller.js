@@ -4,7 +4,6 @@ var homeDb =require("./home_db.js")
 
 // define the home page route
 
-router.get('/home', homeDb.HomePage)
-
-
-module.exports = router
+module.exports.HomePage = (req,res)=>{
+      res.json(homeDb.HomePageJson())
+    }

@@ -27,11 +27,6 @@ let Content=()=>{
 
 
 
-let RegisterPageJson=()=>{
+module.exports.RegisterPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.RegisterPage = (req,res)=>{
-      res.json(RegisterPageJson())
-    }

@@ -10,11 +10,6 @@ let Content=()=>{
 }
 
 
-let LoginPageJson=()=>{
+module.exports.LoginPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.LoginPage = (req,res)=>{
-      res.json(LoginPageJson())
-    }

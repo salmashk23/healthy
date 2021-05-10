@@ -1,18 +1,19 @@
 import React from 'react';
+import {Input, Form, Button} from 'reactstrap';
 import './search.css';
 
 class SearchBar extends React.Component {
     render(){
         return(
-            <form action="/" method="get" className="form-inline">
-                <input
+            <Form action="/" method="get" className="form-inline">
+                <Input
                     type="text"
                     id="header-search"
                     placeholder="Search.."
                     name="s"
                 />
-            <button type="submit" className="text-light"><i className="fa fa-search"> </i></button>
-            </form>
+            <Button type="submit" className="text-light"><i className="fa fa-search"> </i></Button>
+            </Form>
 
         )
     }

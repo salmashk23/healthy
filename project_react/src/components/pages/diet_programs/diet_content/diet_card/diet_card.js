@@ -18,7 +18,7 @@ class DietCard extends React.Component{
         return(
             <Container className="cards-container" >
                 <Slider {...settings}>
-                {this.props.diet.Diet.map((item,i) => {
+                {this.props.diet.map((item,i) => {
                     return(
                         <div key={i} className="card-deck">
                             <Card className="cardd text-center" id="cardCaro" >

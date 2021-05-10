@@ -15,21 +15,14 @@ let Recipe =()=> {
   return(recipeitems)
 }
 
-let RecipeInfo =()=> {
-  return(recipeitem)
-}
+
 
 
 let Content=()=>{
-  return  JSON.parse('{"Diet":'+JSON.stringify(Diet())+',"Recipe":'+JSON.stringify(Recipe())+',"RecipeInfo":'+JSON.stringify(RecipeInfo())+"}")
+  return  JSON.parse('{"Diet":'+JSON.stringify(Diet())+',"Recipe":'+JSON.stringify(Recipe())+"}")
 }
 
 
-let DietPageJson=()=>{
+module.exports.DietPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.DietPage = (req,res)=>{
-      res.json(DietPageJson())
-    }

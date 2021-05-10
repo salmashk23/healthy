@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container} from 'reactstrap';
 import DietCard from "./diet_card/diet_card.js";
-import RecipeCard from "./recipes/recipe.js";
+import  RecipesCards from "./recipes/recipe_cards.js";
 import "./diet_content.css";
 
 class DietContent extends React.Component{
@@ -9,13 +9,13 @@ class DietContent extends React.Component{
         return(
             <Container>
                 <h3 className="display-3 text-center mt-5" id="title">
-                  Diet Programs
+                    Diet Programs
                 </h3>
-                <DietCard diet={this.props.content}/>
+                <DietCard diet={this.props.content.Diet}/>
                 <h3 className="display-3 text-center mt-5" id="title">
-                      Recipes
+                    Recipes
                 </h3>
-                <RecipeCard recipe={this.props.content}/>
+                <RecipesCards recipeItems={this.props.content.Recipe} />
             </Container>
             );
         }

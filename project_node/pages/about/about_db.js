@@ -17,11 +17,6 @@ let Content=()=>{
 }
 
 
-let AboutPageJson=()=>{
+module.exports.AboutPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.AboutPage = (req,res)=>{
-      res.json(AboutPageJson())
-    }

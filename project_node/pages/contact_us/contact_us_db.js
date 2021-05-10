@@ -10,11 +10,6 @@ let Content=()=>{
 }
 
 
-let ContactPageJson=()=>{
+module.exports.ContactPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.ContactPage = (req,res)=>{
-      res.json(ContactPageJson())
-    }

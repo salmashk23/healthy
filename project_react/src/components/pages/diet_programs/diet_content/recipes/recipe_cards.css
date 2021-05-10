@@ -1,0 +1,143 @@
+.recipe {
+  text-align: center;
+
+}
+
+.recipe-img {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.recipe-header {
+  /*background-color: #222;*/
+  /*height: 150px;*/
+  padding: 10px;
+  color: #222;
+}
+
+.recipe-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/******* BASIC STYLES *******/
+
+hr {
+	margin: 0 10px;
+}
+
+/******* MAIN STYLES *******/
+
+
+.IndexView {
+  border-radius: 7px;
+  width: 100%;
+  border: 1px solid #E3E3E3;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.detail-toggle{
+    font-size: 15px;
+    cursor: pointer;
+    color: #3C763D;
+}
+
+.recipe-listing {
+	color: #3C763D;
+	background-color: #DFF0D8;
+	border: 1px solid #D6E9C6;
+	border-radius: 5px;
+    padding: 0px;
+	margin: 20px;
+}
+
+.recipe-details {
+    width: 100%;
+	color: #000;
+    background-color: rgba(204, 255, 206,0.5) ;
+	border-radius: 5px;
+	margin: 3px auto;
+	padding: 10px 0;
+}
+
+
+.recipe-list{
+    width: 100%;
+    margin: 2px auto;
+    font-size: 1em;
+    border: 1px solid #DDD;
+    border-radius: 7px;
+}
+
+
+
+.details-footer {
+	margin: 10px 0;
+}
+
+#new-container {
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-recipe-form {
+	animation-duration: 1s;
+    animation-name: slidein;
+    position: absolute;
+    margin-top: 250px;
+    padding: 0 15px;
+	min-width: 450px;
+	text-align: left;
+    // background-color: $gray;
+    z-index: 3;
+	border: 1px solid #616161;
+	border-radius: 7px;
+	background-color: #FFF;
+}
+
+@keyframes slidein {
+	from {
+		margin-top: 0px;
+	}
+
+	to {
+		margin-top: 250px;
+	}
+}
+
+
+.close-form {
+  cursor: pointer;
+}
+
+.close-icon {
+	cursor: pointer;
+}
+
+.AddRecipe {
+    border: none;
+    border-radius: 15px;
+    margin: 15px;
+    width: 160px;
+    height: 40px;
+    font-size: 1.3em;
+	color: #FFF;
+	background-color: #337AB7;
+    cursor: pointer;
+	border: 1px solid #2e6da4;
+}
+
+.new-recipe-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}

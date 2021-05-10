@@ -5,26 +5,18 @@
 
 /* Style the input fields */
 .form-inline input {
-  vertical-align: middle;
-  margin: 10px 10px 10px 0;
-  margin-left: 50px;
-  padding: 5px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-
+  margin-left: 30px;
 }
 
 /* Style the submit button */
 .form-inline button {
-  padding: 5px 10px;
+  padding: 7px 10px;
   border: 1px solid black;
-  border-radius: 3px;
   background: orange;
 }
 
 .form-inline button:hover {
-  background-color: #DADFE6;
+  background-color: rgba(255, 210, 119);
 }
 
 /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */

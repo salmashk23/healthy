@@ -10,11 +10,6 @@ let Content=()=>{
 }
 
 
-let FitnessPageJson=()=>{
+module.exports.FitnessPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports. FitnessPage = (req,res)=>{
-      res.json( FitnessPageJson())
-    }

@@ -10,11 +10,6 @@ let Content=()=>{
 }
 
 
-let HomePageJson=()=>{
+module.exports.HomePageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.HomePage = (req,res)=>{
-      res.json(HomePageJson())
-    }

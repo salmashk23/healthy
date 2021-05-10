@@ -10,7 +10,7 @@
 
     }
 #myNav li a:hover {
-  background-color: #111;
+  background-color: rgba(44, 44, 44 ,0.5);
 }
 
 .navbar {

@@ -11,7 +11,7 @@
          "STEP 2 : Add the asparagus (reserve the tips), leeks and celery, pour in the bouillon and simmer for 10 mins. Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3 : Meanwhile, stir the egg yolk with the yogurt and garlic. Stir the yogurt mixture into the vegetables and add the tarragon. Divide between two warm plates, then place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Creamy chicken & asparagus braise",
+      "name":"Creamy chicken & asparagus braise",
       "id":"0"
    },
    {
@@ -26,7 +26,7 @@
          "STEP 2 : Add the asparagus (reserve the tips), leeks and celery, pour in the bouillon and simmer for 10 mins. Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3 : Meanwhile, stir the egg yolk with the yogurt and garlic. Stir the yogurt mixture into the vegetables and add the tarragon. Divide between two warm plates, then place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Breakfast super-shake",
+      "name":"Breakfast super-shake",
       "id":"1"
    },
    {
@@ -42,7 +42,7 @@
          "STEP 2 :Add the asparagus (reserve the tips), leeks and celery, pour in the bouillon and simmer for 10 mins. Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3: Meanwhile, stir the egg yolk with the yogurt and garlic.\\Stir the yogurt mixture into the vegetables and add the tarragon.Divide between two warm plates, then place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Satay sweet potato curry",
+      "name":"Satay sweet potato curry",
       "id":"2"
    },
    {
@@ -60,7 +60,7 @@
          "STEP 2 :Add the asparagus (reserve the tips), leeks and celery,pour in the bouillon and simmer for 10 mins. Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3: Meanwhile, stir the egg yolk with the yogurt and garlic. Stir the yogurt mixture into the vegetables and add the tarragon.Divide between two warm plates, then place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Mushroom stroganoff",
+      "name":"Mushroom stroganoff",
       "id":"3"
    },
    {
@@ -79,7 +79,7 @@
          "STEP 2 :Add the asparagus (reserve the tips), leeks and celery,pour in the bouillon and simmer for 10 mins. Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3: Meanwhile, stir the egg yolk with the yogurt and garlic.Stir the yogurt mixture into the vegetables and add the tarragon. Divide between two warm plates, then  place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Red lentil & squash dhal",
+      "name":"Red lentil & squash dhal",
       "id":"4"
    },
    {
@@ -97,7 +97,7 @@
          "STEP 2 :Add the asparagus (reserve the tips), leeks and celery,pour in the bouillon and simmer for 10 mins. Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3: Meanwhile, stir the egg yolk with the yogurt and garlic. Stir the yogurt mixture into the vegetables and add the tarragon. Divide between two warm plates, then place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Turkey & coriander burgers with guacamole",
+      "name":"Turkey & coriander burgers with guacamole",
       "id":"5"
    },
    {
@@ -115,7 +115,7 @@
          "STEP 2 :Add the asparagus (reserve the tips), leeks and celery,pour in the bouillon and simmer for 10 mins.Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3: Meanwhile, stir the egg yolk with the yogurt and garlic. Stir the yogurt mixture into the vegetables and add the tarragon. Divide between two warm plates, then place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Banana pancakes",
+      "name":"Banana pancakes",
       "id":"6"
    },
    {
@@ -133,14 +133,12 @@
          "STEP 2 :Add the asparagus (reserve the tips), leeks and celery,pour in the bouillon and simmer for 10 mins. Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3: Meanwhile, stir the egg yolk with the yogurt and garlic. Stir the yogurt mixture into the vegetables and add the tarragon. Divide between two warm plates, then place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Best ever chocolate brownies recipe",
-      "id":7
+      "name":"Best ever chocolate brownies recipe",
+      "id":"7"
    },
    {
       "ingredients":[
          "1 tbsp rapeseed oil","2 skinless chicken breasts (about 150g each)",
-         "10 medium asparagus spears , each cut into 3",
-         "1 large or 2 small leeks , well washed and thickly sliced",
          "3 celery sticks , sliced","200ml reduced-salt vegetable bouillon",
          "140g frozen peas","1 egg yolk","4 tbsp natural bio yogurt",
          "1 garlic clove , finely grated","⅓ small pack fresh tarragon , chopped",
@@ -151,7 +149,7 @@
          "STEP 2 :Add the asparagus (reserve the tips), leeks and celery, pour in the bouillon and simmer for 10 mins. Add the asparagus tips and peas, and cook for 5 mins more.",
          "STEP 3: Meanwhile, stir the egg yolk with the yogurt and garlic. Stir the yogurt mixture into the vegetables and add the tarragon. Divide between two warm plates, then place the chicken on top of the vegetables. Serve with new potatoes, if you like."
       ],
-      "title":"Quinoa porridge",
+      "name":"Quinoa porridge",
       "id":"8"
    }
 ]

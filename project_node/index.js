@@ -15,16 +15,16 @@ var register = require('./pages/login_register/register/register_controller.js')
 var login = require('./pages/login_register/login/login_controller.js');
 
 
-app.get('/home', home)
-app.get('/about(us)?', about)
-app.get('/diet(programs)?', dietprograms)
-app.get('/fitness(programs)?', fitnessprograms)
-app.get('/contact(us)?', contactus)
-app.get('/article(s)?', articles)
-app.get('/istory', istory)
-app.get('/login', login)
-app.get('/register', register)
-app.get('/psych(o)?', psycho)
+app.get('/home', home.HomePage)
+app.get('/about(us)?', about.AboutPage)
+app.get('/diet(programs)?', dietprograms.DietPage)
+app.get('/fitness(programs)?', fitnessprograms.FitnessPage)
+app.get('/contact(us)?', contactus.ContactPage)
+app.get('/article(s)?', articles.ArticlesPage)
+app.get('/istory', istory.IstoryPage)
+app.get('/login', login.LoginPage)
+app.get('/register', register.RegisterPage)
+app.get('/psych(o)?', psycho.PsychoPage)
 
 
 app.listen(PORT, () => {

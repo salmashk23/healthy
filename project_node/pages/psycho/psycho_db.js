@@ -19,11 +19,6 @@ let Content=()=>{
 }
 
 
-let PsychoPageJson=()=>{
+module.exports.PsychoPageJson=()=>{
     return JSON.parse('{"Header":'+JSON.stringify(header.Header())+',"Content":'+JSON.stringify(Content())+',"Footer":'+ footer.Footer() +"}")
 }
-
-
-module.exports.PsychoPage = (req,res)=>{
-      res.json(PsychoPageJson())
-    }

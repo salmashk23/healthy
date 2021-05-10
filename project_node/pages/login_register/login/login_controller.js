@@ -5,13 +5,15 @@ var loginDb =require("./login_db.js")
 
 // define the login page route
 
-router.get('/login', loginDb.LoginPage)
+module.exports.LoginPage = (req,res)=>{
+      res.json(loginDb.LoginPageJson())
+    }
 
-router.post('/login', (req, res) => {
-  // Insert Login Code Here
-  let email = req.body.email;
-  let password = req.body.password;
-  res.send(`E-mail: ${email} Password: ${password}`);
-});
-
-module.exports = router
+// router.post('/login', (req, res) => {
+//   // Insert Login Code Here
+//   let email = req.body.email;
+//   let password = req.body.password;
+//   res.send(`E-mail: ${email} Password: ${password}`);
+// });
+//
+// module.exports = router
