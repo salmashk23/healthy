@@ -1,0 +1,58 @@
+
+.cardd {
+    margin-top: 20px;
+    box-shadow: 0 1px 1rem -4px #000;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    min-height: 560px;
+
+}
+
+.card-title{
+    color: #FFA15C;
+    font-size: 24px;
+}
+
+.card-text{
+  font-size: 17px;
+
+}
+
+#cardCaro{
+    background: rgba(0, 0, 0 ,0.7)  ;
+    color: #E6F7FB  ;
+    font-family:  sans-serif;
+}
+
+
+
+@media screen and (max-width: 625px) {
+  .container {
+    width: 100%
+  }
+
+
+  .card {
+    margin: .5rem;
+  }
+}
+
+#more{
+    border: 2px solid white;
+
+
+}
+
+
+#more a {
+    color: white;
+    transition: color .2s;
+
+}
+
+#more a:hover{
+    color: black;
+}

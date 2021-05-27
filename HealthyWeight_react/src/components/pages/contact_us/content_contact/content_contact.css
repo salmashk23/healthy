@@ -1,0 +1,16 @@
+#contact-form{
+     background: url("../../../general/img/contact.jpg") center;
+     background-size: cover;
+     border: 2px solid white;
+     border-radius: 5px;
+     font-size: 20px;
+     font-family: 'Shippori Mincho';
+}
+
+#message{
+     height: 100px;
+}
+
+#send button{
+    font-size: 20px;
+}

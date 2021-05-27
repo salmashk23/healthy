@@ -1,0 +1,38 @@
+#logreg-content{
+    background: url("../../../components/general/img/login_register.jpg") center;
+    background-size: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family: 'Shippori Mincho';
+
+}
+
+#label{
+    font-size: 18px;
+}
+
+#checks{
+     position: absolute;
+     padding-left: 20px;
+     margin-bottom: 50px;
+}
+
+.signBtn{
+    margin-top: 50px;
+}
+
+.sign{
+    background: rgba(0, 0, 0, 0.5);
+    font-family: 'Shippori Mincho';
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+
+.sign a{
+    color:orange;
+}
+
+#select{
+    height: 35px;
+}

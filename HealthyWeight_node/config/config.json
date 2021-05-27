@@ -1,0 +1,9 @@
+{
+    "phpMyAdmin":{
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "database": "healthyweight"
+    }
+
+}
