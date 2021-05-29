@@ -1,0 +1,56 @@
+button {
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.75em;
+  display: inline-block;
+  text-decoration: none;
+}
+.comment-box {
+  max-width: 40rem;
+  color: #fff;
+  background: RGB(0,0,0 , 0.5);
+  font-family: 'Shippori Mincho';
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0.2rem 1rem 2rem;
+}
+.comment-form {
+  border-radius: 0.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem;  
+}
+.comment-form-fields {
+  margin-bottom: 0.25rem;
+}
+
+.comment-count {
+  color: darkgrey;
+}
+
+#comment-reveal {
+  float: right;
+}
+.comment {
+  border-top: 0.125rem solid darkgray;
+}
+.comment-body {
+  font-style: italic;
+  margin-left: 1rem;
+}
+.comment-footer {
+  margin-bottom: 1rem;
+}
+.comment-footer-delete {
+  padding: 0.2rem 0;
+  color: rgb(255, 227, 133);
+  text-decoration: none;
+}
+
+.comment-footer-delete:hover {
+    color: orangered;
+    font-weight: bold;
+    text-decoration: none;
+
+}

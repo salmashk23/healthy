@@ -12,9 +12,12 @@ class RecipeModal extends Component {
     this.state = {
       recipeList: this.props.recipeItems,
       cardIndex: null,
-      isModalOpen: false
+      isModalOpen: false,
+      showAdd: false
     };
     this.toggleModal = this.toggleModal.bind(this);
+    this.showAddModal = this.showAddModal.bind(this);
+    this.addRecipe = this.addRecipe.bind(this);
   }
 
   toggleModal(id) {
@@ -23,6 +26,16 @@ class RecipeModal extends Component {
       cardIndex: id,
       isModalOpen: !this.state.isModalOpen
     });
+  }
+
+  showAddModal() {//show the new recipe modal
+    this.setState({showAdd: !this.state.showAdd});
+  }
+  addRecipe(recipe) {//create a new recipe
+    let recipes = this.state.recipes;
+    recipes.push(recipe);
+    this.setState({recipes: recipes});
+    this.showAddModal();
   }
 
   render() {
@@ -67,11 +80,9 @@ class RecipeModal extends Component {
           overlayClassName="myoverlay"
         >
           <ModalHeader className="text-center">
-
             <h3>{cardIndex !== null && recipeList[cardIndex].name} </h3>
             <p >{cardIndex !== null && recipeList[cardIndex].written_by} <br/></p>
             <p><Rating/></p>
-
           </ModalHeader>
           <ModalBody>
               <Row>
@@ -94,7 +105,6 @@ class RecipeModal extends Component {
                </Row>
                <Button className="btn-warning btn-block" id="more" onClick={e => this.toggleModal(cardIndex)}> close </Button>
           </ModalBody>
-
         </Modal>
         </Slider>
       </Fragment>

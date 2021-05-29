@@ -6,7 +6,6 @@ import "./description.css";
 
 export default class DescStory extends React.Component{
     render(){
-        console.log("hell")
         return (
             <Carousel
                 autoPlay={true}

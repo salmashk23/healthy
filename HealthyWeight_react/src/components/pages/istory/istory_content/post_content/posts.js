@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Input, Form, Label, Col, Row } from 'reactstrap';
+import CommentBox from './discussion.js';
 // import PostItems from "./post_items.js";
 import "./post.css";
 
@@ -31,8 +32,11 @@ export default class Post extends Component {
                  )
              }
 
-                    <Button type="submit" outline color="light" className="btn-lg btn-block mt-3 ">Post</Button>
+                    <Button type="submit" outline color="light" className="btn-lg btn-block mt-2 ">Post</Button>
                 </Form>
+            </Col>
+            <Col sm="4">
+            <CommentBox disc={this.props.post.Discussion}/>
             </Col>
         </Row>
         );

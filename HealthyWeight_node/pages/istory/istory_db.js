@@ -16,8 +16,14 @@ let Post = async()=> {
   // return(istorypost)
 }
 
+let Discussion = async()=> {
+  return await generalDb.DbQuery("SELECT * FROM istory_post_items")
+}
+
 let Content= async()=>{
-  return  JSON.parse('{"Desc":'+JSON.stringify(await Desc())+',"Post":'+JSON.stringify(await Post())+"}")
+  return  JSON.parse('{"Desc":'+JSON.stringify(await Desc())+
+                      ',"Post":'+JSON.stringify(await Post())+
+                      ',"Discussion":'+JSON.stringify(await Discussion())+"}")
 }
 
 
