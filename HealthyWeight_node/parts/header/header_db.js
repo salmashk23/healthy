@@ -5,7 +5,7 @@ var generalDb = require('../../General_DB.js')
 
 
 let MenuItems = async () => {
-    return await generalDb.DbQuery("SELECT * FROM menu_items INNER JOIN menu_list ON menu_list.id=menu_items.menu_id where menu_id=1")
+    return await generalDb.DbQuery("SELECT * FROM menu_items INNER JOIN menu_list ON menu_list.id=menu_items.menu_id AND name='header menu'")
 }
 
 module.exports.HeaderJson = async () => {

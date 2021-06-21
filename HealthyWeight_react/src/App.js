@@ -10,7 +10,7 @@ import Articles from './components/pages/articles/articles.js';
 import Istory from './components/pages/istory/istory.js';
 import LoginPage from './components/pages/login_register/login_page.js';
 import RegisterPage from './components/pages/login_register/register_page.js';
-import PsychoPage from './components/pages/home/psychology_page/psychology_page.js';
+import ProfilePage from './components/general/profile/profile.js';
 
 import Error from './components/error';
 
@@ -30,7 +30,7 @@ class App extends React.Component {
                         <Route path="/contact_us" component={ContactUs} />
                         <Route path="/login_page" component={LoginPage} />
                         <Route path="/register_page" component={RegisterPage} />
-                        <Route path="/psychology_page" component={PsychoPage} />
+                        <Route path="/profile" component={ProfilePage} />
                         <Route component={Error}/>
                     </Switch>
 

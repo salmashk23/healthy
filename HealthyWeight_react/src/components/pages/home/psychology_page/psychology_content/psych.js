@@ -1,6 +1,5 @@
 import React from 'react';
 import {Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
-import Chat from  './chat_psych.js';
 
 
 class Psycho extends React.Component{
@@ -17,7 +16,7 @@ class Psycho extends React.Component{
                                         {item.about}
                                     </CardText>
                                 </CardBody>
-                                    <Button className="m-3 p-2 btn-outline-light" id="more">Chat Now </Button>
+                                    <Button className="m-3 p-2 btn-outline-light" id="more">Chat Now</Button>
                         </Card>
                             )
                         }

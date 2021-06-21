@@ -1,10 +1,12 @@
-import React , { Component , Fragment} from "react";
-import {Container, Card, CardSubtitle,CardBody, Row,
-     CardTitle, CardText, Button ,CardImg, Col,
-      ModalHeader, ModalBody, ListGroupItem , ListGroup} from 'reactstrap';
+import React , { Component , Fragment } from 'react';
+import { Card, CardSubtitle,CardBody, Row,
+         CardTitle, CardText, Button ,CardImg, Col,
+         ModalHeader, ModalBody, ListGroupItem , ListGroup } from 'reactstrap';
 import Modal from 'react-modal';
-import Slider from "react-slick";
-import Rating from "../../../../general/rating/rating.js";
+import Slider from 'react-slick';
+import AddRecipe from './addRecipe.js';
+import Modall from './ggg.js'
+import Rating from '../../../../general/rating/rating.js';
 
 class RecipeModal extends Component {
   constructor(props) {
@@ -13,11 +15,9 @@ class RecipeModal extends Component {
       recipeList: this.props.recipeItems,
       cardIndex: null,
       isModalOpen: false,
-      showAdd: false
     };
+    
     this.toggleModal = this.toggleModal.bind(this);
-    this.showAddModal = this.showAddModal.bind(this);
-    this.addRecipe = this.addRecipe.bind(this);
   }
 
   toggleModal(id) {
@@ -27,28 +27,17 @@ class RecipeModal extends Component {
       isModalOpen: !this.state.isModalOpen
     });
   }
-
-  showAddModal() {//show the new recipe modal
-    this.setState({showAdd: !this.state.showAdd});
-  }
-  addRecipe(recipe) {//create a new recipe
-    let recipes = this.state.recipes;
-    recipes.push(recipe);
-    this.setState({recipes: recipes});
-    this.showAddModal();
-  }
-
   render() {
     const { recipeList, cardIndex } = this.state;
     console.log("CardIndex: ", cardIndex);
     console.log("Recipe: ", recipeList[cardIndex]);
     const settings = {
-
       dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1}
+      
     return (
       <Fragment>
         <Slider {...settings}>
@@ -106,7 +95,7 @@ class RecipeModal extends Component {
                <Button className="btn-warning btn-block" id="more" onClick={e => this.toggleModal(cardIndex)}> close </Button>
           </ModalBody>
         </Modal>
-        </Slider>
+        </Slider>     
       </Fragment>
     );
   }

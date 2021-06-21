@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import {ModalHeader,ModalBody,Label,FormGroup,ModalFooter,Button} from 'reactstrap';
+import '../../../../general/modal/modal_card.css';
 
 
 export class AddRecipe extends React.Component {
@@ -48,8 +49,13 @@ export class AddRecipe extends React.Component {
     this.setState({image:"" , name: "", written_by:"", ingredients: "", steps:""});
     onAddModal();
   }
+  
   render() {
     const onShow = this.props.onShow;
+    var regex1 = /^\S/;
+    var regex2 = /^[^;\s]/;
+    var regex3 = /[^;\s]$/;
+    const validRecipe = regex1.test(this.state.name) && regex2.test(this.state.ingredients) && regex3.test(this.state.ingredients) && regex2.test(this.state.steps) && regex3.test(this.state.steps);
     return(
       <Modal 
         show={onShow}
@@ -75,15 +81,15 @@ export class AddRecipe extends React.Component {
           </FormGroup>
           <FormGroup controlId="formControlsIngredients">
             <Label>Recipe Ingredients</Label>
-            <div className="form-control" componentClass="textarea" type="text" required onChange={this.handleRecipeIngredientsChange} value={this.state.ingredients} placeholder="Enter Ingredients(separate by ;)" />
+            <div className="form-control" componentClass="textarea" type="text" required onChange={this.handleRecipeIngredientsChange} value={this.state.ingredients} placeholder="Enter Ingredients (separate by ;)" />
           </FormGroup>
           <FormGroup controlId="formControlsIngredients">
             <Label>Recipe Steps</Label>
-            <div className="form-control" componentClass="textarea" type="text" required onChange={this.handleRecipeStepsChange} value={this.state.steps} placeholder="Enter Ingredients(separate by ;)" />
+            <div className="form-control" componentClass="textarea" type="text" required onChange={this.handleRecipeStepsChange} value={this.state.steps} placeholder="Enter Steps (separate by ;)" />
           </FormGroup>
         </ModalBody>
         <ModalFooter>
-          <Button bsStyle="success" onClick={this.handleSubmit}>Save Recipe</Button>
+          <Button disabled={!validRecipe} bsStyle="success" onClick={this.handleSubmit}>Save Recipe</Button>
         </ModalFooter>
       </Modal>
     );

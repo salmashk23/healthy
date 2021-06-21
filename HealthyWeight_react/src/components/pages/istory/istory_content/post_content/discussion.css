@@ -8,12 +8,11 @@ button {
   text-decoration: none;
 }
 .comment-box {
-  max-width: 40rem;
+  max-width: 100rem;
   color: #fff;
   background: RGB(0,0,0 , 0.5);
   font-family: 'Shippori Mincho';
-  border: 2px solid white;
-  border-radius: 5px;
+
   padding: 0.2rem 1rem 2rem;
 }
 .comment-form {

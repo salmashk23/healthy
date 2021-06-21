@@ -12,17 +12,33 @@ let Desc = async()=> {
 }
 
 let Post = async()=> {
-    return await generalDb.DbQuery("SELECT * FROM forms_items WHERE forms_id=6")
+    return await generalDb.DbQuery("SELECT * FROM forms_items WHERE forms_id=5")
   // return(istorypost)
 }
 
-let Discussion = async()=> {
-  return await generalDb.DbQuery("SELECT * FROM istory_post_items")
+let UserPost = async()=> {
+  return await generalDb.DbQuery("SELECT * FROM istory_users_posts")
+// return(istorypost)
 }
+
+let Discussion = async()=> {
+  return await generalDb.DbQuery("SELECT * FROM istory_users_posts")
+}
+
+
+module.exports.InsertPost = (user)=>{
+  let Sql= "INSERT INTO istory_users_posts (`id`,`author` , `body` , `file`) "+
+            " VALUES ( Null , '"+user.author+ "',"+
+            " '" +user.body+ "' ,'" +user.file+ "');";
+  let DbResult=  generalDb.DbQuery(Sql);
+  return  DbResult;
+}
+
 
 let Content= async()=>{
   return  JSON.parse('{"Desc":'+JSON.stringify(await Desc())+
                       ',"Post":'+JSON.stringify(await Post())+
+                      ',"UserPost":'+JSON.stringify(await UserPost())+
                       ',"Discussion":'+JSON.stringify(await Discussion())+"}")
 }
 

@@ -1,6 +1,4 @@
 var express = require('express')
-var router = express.Router()
-// var videos =  require("./fitness_items/videos_items.json")
 var footer = require('../../parts/footer/footer_controller.js')
 var header = require('../../parts/header/header_controller.js')
 var generalDb = require('../../General_DB.js')
@@ -9,7 +7,7 @@ var generalDb = require('../../General_DB.js')
 
 let Video = async()=> {
   return await generalDb.DbQuery("SELECT * FROM carousel_items WHERE carousel_id=2 ")
-// return( dietitems)
+
 }
 
 

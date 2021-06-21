@@ -8,33 +8,37 @@ class CommentBox extends React.Component {
       super(props);     
       this.state = {
         showComments: false,
-        comments: this.props.disc
+        comments: this.props.post.Discussion
       };
     }
     
     render () {
       const comments = this._getComments();
       let commentNodes;
-      let buttonText = 'Show Comments';
+      let buttonText = 'Show Posts';
       
       if (this.state.showComments) {
-        buttonText = 'Hide Comments';
+        buttonText = 'Hide Post';
         commentNodes = <div className="comment-list">{comments}</div>;
       }
       
       return(
-                <div className="comment-box p-4">
-                <h3 className="text-center h2 m-5"> Join the Discussion! </h3>
+        <Row className=" justify-content-center mt-5">
+        <Col sm="6">
+                <div className="comment-box ">
+                <h3 className="text-center h2 m-5"> Create Post </h3>
                 <CommentForm addComment={this._addComment.bind(this)}/>
                 <Button className="btn-warning" id="comment-reveal" onClick={this._handleClick.bind(this)}>
                     {buttonText}
                 </Button>
-                <h3>Comments</h3>
+                <h3>Posts</h3>
                 <h4 className="comment-count">
                     {this._getCommentsTitle(comments.length)}
                 </h4>
                 {commentNodes}
                 </div> 
+          </Col>
+          </Row>
       );
     } // end render
     
@@ -66,11 +70,11 @@ class CommentBox extends React.Component {
     
     _getCommentsTitle(commentCount) {
       if (commentCount === 0) {
-        return 'No comments yet';
+        return 'No Posts Yet';
       } else if (commentCount === 1) {
-        return "1 comment";
+        return "1 Post";
       } else {
-        return `${commentCount} comments`;
+        return `${commentCount} Posts`;
       }
     }
   } // end CommentBox component
@@ -78,7 +82,7 @@ class CommentBox extends React.Component {
   class CommentForm extends React.Component {
     render() {
       return (
-            <Form className="comment-form" onSubmit={this._handleSubmit.bind(this)}>
+            <Form action="/istoryForm" method="Post" className="comment-form" onSubmit={this._handleSubmit.bind(this)}>
                 <Input type="text" className="mb-5 text-dark" placeholder="Your Name" required innerRef={(Input) => this._author = Input}/>
                 <Input type="textarea" className="mb-5 text-dark" placeholder="What's on your mind?" rows="4" required innerRef={(textarea) => this._body = textarea}/>
                 <Button className="btn-outline-light btn-lg btn-block mt-5" type="submit">Post</Button>
@@ -101,13 +105,13 @@ class CommentBox extends React.Component {
           <p className="comment-header">{this.props.author}</p>
           <p className="comment-body">- {this.props.body}</p>
           <div className="comment-footer">
-            <a href="#" className="comment-footer-delete" onClick={this._deleteComment}>Delete Comment</a>
+            <a href="#" className="comment-footer-delete" onClick={this._deleteComment}>Delete Post</a>
           </div>
         </div>
       );
     }
     _deleteComment() {
-      alert("-- DELETE Comment Functionality COMMING SOON...");
+      alert("-- DELETE Post Functionality COMMING SOON...");
     }
   }
   

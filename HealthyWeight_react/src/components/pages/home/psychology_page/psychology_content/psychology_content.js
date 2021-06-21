@@ -3,6 +3,7 @@ import Notes from './notes.js';
 import Psycho from './psych.js';
 
 
+
 class PsychContent extends React.Component{
     render(){
         return(

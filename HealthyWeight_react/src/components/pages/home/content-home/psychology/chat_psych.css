@@ -1,0 +1,15 @@
+.rcw-conversation-container > .rcw-header {
+    background-color: orange;
+    text-transform:none;
+  }
+   
+  .rcw-message > .rcw-response {
+    color: black;
+    text-transform:none;
+  }
+
+  .rcw-newMessage{
+      color: orchid;
+  }
+
+

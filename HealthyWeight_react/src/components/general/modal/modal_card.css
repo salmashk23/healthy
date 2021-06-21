@@ -20,6 +20,7 @@
    overflow: auto;
    border-radius: 4px;
    outline: none;
+   max-height: 500px ;
  }
 
  .myoverlay {

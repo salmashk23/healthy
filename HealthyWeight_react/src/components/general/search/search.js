@@ -3,6 +3,7 @@ import {Input, Form, Button} from 'reactstrap';
 import './search.css';
 
 class SearchBar extends React.Component {
+
     render(){
         return(
             <Form action="/" method="get" className="form-inline">
@@ -10,6 +11,7 @@ class SearchBar extends React.Component {
                     type="text"
                     id="header-search"
                     placeholder="Search.."
+                    
                     name="s"
                 />
             <Button type="submit" className="text-light"><i className="fa fa-search"> </i></Button>
