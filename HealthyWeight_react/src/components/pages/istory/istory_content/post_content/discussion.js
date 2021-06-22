@@ -90,6 +90,32 @@ class CommentBox extends React.Component {
       );
     } // end render
     
+    handleSubmit = async e => {
+      e.preventDefault();
+      let isValid = this.handleValidation();
+      if (isValid) {
+      // preparing user's data 
+      let data = {
+        "author": this.state.comments["author"],
+        "email": this.state.comments["body"]
+      }
+      // sending form data on button submition clicked 
+      const response = await fetch('/users/istoryForm', {
+        method: 'POST',
+        body: JSON.stringify({data}),
+        headers: {
+          'Content-Type' : 'application/json'
+        }
+      });
+      const body = await response.text();
+      this.setState({ dataResponse: body });
+      
+      console.log("respond"+this.state.dataResponse);
+        
+      // clear form 
+        // this.setState(this.setState({dataResponse: ''}));
+      }
+    };
     _handleSubmit(event) { 
       event.preventDefault();   // prevents page from reloading on submit
       let author = this._author;

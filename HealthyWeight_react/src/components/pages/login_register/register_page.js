@@ -10,7 +10,7 @@ class RegisterPage extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`/register`)
+        fetch(`/register_page`)
         .then(res => res.json())
         .then(json => this.setState({ data: json }));
     }

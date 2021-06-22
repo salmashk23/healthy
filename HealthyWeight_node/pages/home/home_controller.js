@@ -5,5 +5,5 @@ var homeDb =require("./home_db.js")
 // define the home page route
 
 module.exports.HomePage = async (req,res)=>{
-      res.json(await homeDb.HomePageJson())
+      res.json(await homeDb.HomePageJson(req))
     }

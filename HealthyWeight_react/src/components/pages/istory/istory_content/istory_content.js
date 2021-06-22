@@ -1,20 +1,20 @@
 import React from 'react';
 import DescStory from './desc_content/description.js';
-import FormComponent from './post_content/posts.js';
-import CommentBox from './post_content/discussion';
+import CommentBox from './post_content/istory_posts.js';
 
 
-class StoryContent extends React.Component {
+
+class IstoryContent extends React.Component {
     render(){
-        console.log("hi",this.props.content)
         return (
             <div className="container-fluid">
                 <DescStory desc={this.props.content}/>
-                {/* <FormComponent post={this.props.content} /> */}
-                <CommentBox post={this.props.content} />
+                <CommentBox 
+                    post={this.props.content} 
+                    picture_url={this.props.picture_url} />
             </div>
         );
     }
 }
 
-export default StoryContent;
+export default IstoryContent;

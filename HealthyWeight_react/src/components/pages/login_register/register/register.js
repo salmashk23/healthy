@@ -88,7 +88,7 @@ import  "../login_register.css";
           "password": this.state.fields["password"]
         }
         // sending form data on button submition clicked 
-        const response = await fetch('/users/registerForm', {
+        const response = await fetch('/register_page', {
           method: 'POST',
           body: JSON.stringify({data}),
           headers: {
@@ -99,8 +99,6 @@ import  "../login_register.css";
         this.setState({ dataResponse: body });
         console.log("respond"+this.state.dataResponse);
           
-        // clear form 
-          // this.setState(this.setState({dataResponse: ''}));
         }
       };
  
@@ -145,7 +143,7 @@ import  "../login_register.css";
                         <Button 
                             onClick={this.handleSubmit} 
                             type="submit" o
-                            utline color="light" 
+                            outline color="light" 
                             className="btn-lg btn-block mt-5 ">
                                 Sign Up
                         </Button>

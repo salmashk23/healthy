@@ -22,7 +22,7 @@ let Content= async()=>{
 
 
 
-module.exports.RegisterPageJson= async()=>{
+module.exports.RegisterPageJson= async(req)=>{
     return ({
         "Header": await header.Header(),
         "Content":await Content(),

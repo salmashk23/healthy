@@ -11,7 +11,7 @@ let Content = async ()=>{
 }
 
 
-module.exports.ContactPageJson= async ()=>{
+module.exports.ContactPageJson= async (req)=>{
     return ({
         "Header": await header.Header(),
         "Content":await Content(),

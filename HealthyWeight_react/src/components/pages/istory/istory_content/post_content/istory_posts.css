@@ -1,0 +1,48 @@
+#content{
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.add-post{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.user-name{
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.date {
+  font-size: 12px
+}
+
+.comment-text {
+  font-size: 15px;
+  color : #000;
+  margin-left: 40px;
+}
+
+.fs-12 {
+  font-size: 14px
+}
+
+.shadow-none {
+  box-shadow: none
+}
+
+.cursor:hover {
+  color:  #ff944d;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+.textarea {
+  resize: none
+}
+#button .btn {
+  color: #ff944d;
+  border-color: #ff944d;
+}

@@ -23,7 +23,7 @@ let Content=async()=>{
 }
 
 
-module.exports.ArticlesPageJson= async()=>{
+module.exports.ArticlesPageJson= async(req)=>{
     return ({
         "Header": await header.Header(),
         "Content":await Content(),

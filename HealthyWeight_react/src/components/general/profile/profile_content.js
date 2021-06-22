@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card,  CardBody, CardTitle, CardText } from 'reactstrap';
+import {Card,  CardBody, CardTitle, CardText, Button } from 'reactstrap';
 
 
 class ContentProfile extends React.Component{
@@ -17,6 +17,7 @@ class ContentProfile extends React.Component{
                             Weight: {this.props.content.weight} <br/>
                         </CardText>
                     </CardBody>
+                    <Button> <a href="/logout">Log Out</a> </Button>
                 </Card>  
             </div>
         )

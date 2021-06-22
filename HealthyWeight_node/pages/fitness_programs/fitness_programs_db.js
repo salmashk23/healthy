@@ -21,7 +21,7 @@ return  JSON.parse('{"Video":'+JSON.stringify(await Video())+',"FitPrograms":'+J
 }
 
 
-module.exports.FitnessPageJson= async ()=>{
+module.exports.FitnessPageJson= async (req)=>{
     return ({
         "Header": await header.Header(),
         "Content":await Content(),

@@ -6,7 +6,7 @@ var loginDb =require("./login_db.js")
 // define the login page route
 
 module.exports.LoginPage = async (req,res)=>{
-      res.json(await loginDb.LoginPageJson())
+      res.json(await loginDb.LoginPageJson(req))
     }
 
 // router.post('/login', (req, res) => {

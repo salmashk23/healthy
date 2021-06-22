@@ -1,5 +1,6 @@
 import React from "react";
 import {  Button, Input, FormGroup , Form, Label, Col, Row } from 'reactstrap';
+import { useHistory } from "react-router-dom";
 import  "../login_register.css";
 
 export default class Login extends React.Component {
@@ -11,7 +12,7 @@ export default class Login extends React.Component {
             errors: {}
         }
      }
-     handleValidation(){
+    handleValidation(){
         let fields = this.state.fields;
         let errors = {};
         let formIsValid = true;
@@ -40,36 +41,28 @@ export default class Login extends React.Component {
        return formIsValid;
    }
 
-   handleSubmit = async e => {
+    handleSubmit = async e => {
     e.preventDefault();
     let isValid = this.handleValidation();
     if (isValid) {
-      let data = {
-        "email": this.state.fields["email"],
-        "password": this.state.fields["password"]
-      }
       //sending form data on button submition clicked 
-      const response = await fetch('/users/loginForm', {
+        fetch('/login_page', {
         method: 'POST',
-        body: JSON.stringify({data}),
+        body: JSON.stringify({ "email": this.state.fields["email"], "password": this.state.fields["password"] }),
         headers: {
           'Content-Type' : 'application/json'
         }
       })
       .then(res => res.json())
-      .then(json => this.setState({ data: json }));
-
-      //get respond from server
-      // const body = await response.text();
-      const body = this.state.data
-      this.setState({ dataResponse: body.msg });
-      console.log("respond body" + body.user);
-
-      // clear form
-      if (body.msg == 'OK')
-        this.props.handleSuccessfulAuth(this.state.data)
+      .then(json => {
+        if (json.res === true) {
+          window.location.replace("/");
+        } else {
+          this.setState({ dataResponse: json.res })
         }
-    }
+      }
+      );
+    }}
     handleChange(field, e){ 
         e.preventDefault();        
         let fields = this.state.fields;

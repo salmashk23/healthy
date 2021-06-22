@@ -25,7 +25,7 @@ let Content= async()=>{
 }
 
 
-module.exports.DietPageJson= async ()=>{
+module.exports.DietPageJson= async (req)=>{
     return ({
         "Header": await header.Header(),
         "Content":await Content(),

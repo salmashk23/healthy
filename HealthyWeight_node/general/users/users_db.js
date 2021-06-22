@@ -16,10 +16,9 @@ module.exports.InsertData = (user)=>{
 module.exports.UpdateData = (user)=>{
     let Sql= "UPDATE INTO users SET `name` ='"+user.name+"', `email` = '"+user.email+"',"+
               "`age` = '"+user.age+"' , `height` = '"+user.height+"' , `weight` = '"+user.weight+"',"+
-              "`password` ='"+user.password+"', `confirm_password` = '"+user.confirm_password+"',"+
-              "WHERE `email` like '" + user.email+"'";
+              "`password` ='"+user.password+"' WHERE `email` like '" + user.email+"'";
     let DbResult= generalDb.DbQuery(Sql)
-      return DbResult;
+    return DbResult;
  }
 
 module.exports.GetUserData =  (field, value)=>{

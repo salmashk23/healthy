@@ -18,7 +18,7 @@ let HandleUserData = async (user) =>{
         else
             //return("OK")
             return ({
-                msg : "OK",
+                msg : "Welcome Back",
                 status : "NOT_LOGGED_IN",
                 user: [{
                     email : user.email,
@@ -26,14 +26,15 @@ let HandleUserData = async (user) =>{
                 }]
             });
             //redirect to profile page
-            (req, res) => { 
-                res.redirect('/profile');
-            }  
+            // (req, res) => { 
+            //     res.redirect('/profile');
+            // }  
     }
     else
         return (`User Not Found`)
 }
- 
+
+
 module.exports.LoginFormHandler = async (req,res)=>{
     console.log(req.body.data);
     let str= await HandleUserData(req.body.data);

@@ -4,8 +4,6 @@ import { Card, CardSubtitle,CardBody, Row,
          ModalHeader, ModalBody, ListGroupItem , ListGroup } from 'reactstrap';
 import Modal from 'react-modal';
 import Slider from 'react-slick';
-import AddRecipe from './addRecipe.js';
-import Modall from './ggg.js'
 import Rating from '../../../../general/rating/rating.js';
 
 class RecipeModal extends Component {

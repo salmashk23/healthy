@@ -27,7 +27,7 @@ let Content= async()=>{
 
 
 
-module.exports.HomePageJson= async()=>{
+module.exports.HomePageJson= async(req)=>{
     return ({
         "Header": await header.Header(),
         "Content":await Content(),

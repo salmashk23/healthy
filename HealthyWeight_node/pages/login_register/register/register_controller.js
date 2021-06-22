@@ -5,7 +5,7 @@ var registerDb =require("./register_db.js")
 // define the Register page route
 
 module.exports.RegisterPage = async (req,res)=>{
-      res.json(await registerDb.RegisterPageJson())
+      res.json(await registerDb.RegisterPageJson(req))
     }
 
 
