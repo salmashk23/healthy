@@ -147,7 +147,11 @@ import  "../login_register.css";
                             className="btn-lg btn-block mt-5 ">
                                 Sign Up
                         </Button>
-                        <div className='form-inputs'><p className="text-danger text-center h4">{this.state.dataResponse}</p></div>          
+                        <div className='form-inputs'>
+                            <p className="text-danger text-center h4">
+                                {this.state.dataResponse}
+                            </p>
+                        </div>          
                     </Form>
                     <p className="sign text-center text-white p-3 h3">
                           Already have an account? <a href="/login_page">Sign In</a>

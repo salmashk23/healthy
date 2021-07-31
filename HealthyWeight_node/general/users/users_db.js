@@ -4,7 +4,7 @@ var generalDb = require('../../General_DB.js');
 
 // insert details to users database
 module.exports.InsertData = (user)=>{
-    let Sql= "INSERT INTO users (`id`,`name` , `email` , `gender`, `age` , `height` , "+
+    let Sql= "INSERT INTO users (`iduser`,`name` , `email` , `gender`, `age` , `height` , "+
                 " `weight` , `password`) VALUES ( Null , '"+user.name+ "',"+
                 " '" +user.email+ "', '"+user.platform+" ' ,'" +user.age+ "', '" +user.height+ "', '" +user.weight+ "',"+
                 " '" +user.password+ "');";

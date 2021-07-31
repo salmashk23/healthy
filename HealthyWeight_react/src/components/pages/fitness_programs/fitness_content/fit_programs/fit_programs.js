@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import "../../../../general/card_carousel/card_carousel.css";
 
 
-
 class FitnessCard extends React.Component{
     render(){
         const settings = {
@@ -24,7 +23,11 @@ class FitnessCard extends React.Component{
                         return(
                             <div key={i} className="card-deck">
                                 <Card className="cardd text-center" id="cardCaro" >
-                                    <CardImg  src={process.env.PUBLIC_URL + item.image} width="250px" height="250px" alt="Card image cap"/>
+                                    <CardImg  
+                                        src={process.env.PUBLIC_URL + item.image} 
+                                        width="250px" 
+                                        height="250px" 
+                                        alt="Card image cap"/>
                                     <CardBody>
                                         <CardTitle className="mb-3 card-title">{item.title}</CardTitle>
                                         <CardText className="card-text">
@@ -35,8 +38,10 @@ class FitnessCard extends React.Component{
                                         <h5>Cost: {item.cost}</h5> 
                                     </CardFooter>
                                     <a href={item.url}>
-                                        <Button className="btn-outline-light btn-block" id="more">Try It</Button>
-                                     </a>
+                                        <Button className="btn-outline-light btn-block" id="more">
+                                            Try It
+                                        </Button>
+                                    </a>
                                 </Card>
                             </div>
                                 )
@@ -45,7 +50,7 @@ class FitnessCard extends React.Component{
                     }
                 </Slider>
             </Container>
-         );
+        );
     }
  }
 

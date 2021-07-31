@@ -64,7 +64,8 @@ app.post('/login_page', jsonParser, async (req, res) => {
   } else {
     return res.send({ res: "You need to enter the email and password" });
   }
-});
+})
+
 app.get('/login_page', login.LoginPage)
 // app.post('/users/loginForm', loginForm.LoginFormHandler)
 
@@ -78,8 +79,7 @@ app.post('/istory', jsonParser, async (req, res) => {
   if (!req.session || !req.session.userid) {
     res.json({"error": "Something went wrong"});
   }
-  itemToAdd = req.body;
-  result = await generalDb.DbQuery(`INSERT INTO \`istory_users_posts\` VALUES('${itemToAdd.post}', NOW(), NULL, ${req.session.userid})`);
+  result = await generalDb.DbQuery(`INSERT INTO \`istory_users_posts\` VALUES( NULL , ${req.session.userid},'${req.body.message}', NOW() )`);
   res.json({ "id": result.insertId });
 });
 
@@ -90,8 +90,6 @@ app.get('/diet(programs)?', dietprograms.DietPage)
 app.get('/fitness(programs)?', fitnessprograms.FitnessPage)
 app.get('/contact(us)?', contactus.ContactPage)
 app.get('/article(s)?', articles.ArticlesPage)
-
-
 app.get('/register_page', register.RegisterPage)
 app.post('/register_page',registerForm.RegisterFormHandler)
 

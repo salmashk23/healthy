@@ -9,21 +9,22 @@ class DemoCarousel extends React.Component{
     return(
         <div className="container">
             <h3 id="note" className="text-center text-center p-3 border">
-                 <p>
-                     Some of the people who "Healthy Weight"
-                     changed their lives and there are many more <br/>
-                     If you want to make your life healthier then
+                <p>
+                    Some of the people who "Healthy Weight"
+                    changed their lives and there are many more <br/>
+                    If you want to make your life healthier then
                     <a href="/register_page" className="text-warning"> Join us </a>
                 </p>
             </h3>
             <Carousel autoPlay={true} infiniteLoop={true} showStatus={false} showThumbs={false}>
                 {this.props.carousel.map((item,i) => {
                     return(
-                        <img key={i} src={process.env.PUBLIC_URL + item.image}  className="sliderimg" alt={item.alt}/>
-                         )
-                    }
-                 )
-            }
+                        <img 
+                            key={i} 
+                            src={process.env.PUBLIC_URL + item.image}  
+                            className="sliderimg" 
+                            alt={item.alt}/>
+                )})}
             </Carousel>
         </div>
         );

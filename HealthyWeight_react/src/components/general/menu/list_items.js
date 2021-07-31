@@ -8,9 +8,9 @@ class ListItems extends React.Component{
             <ListItem key={i} item={jsonPart} /> ));
 
         return(
-                <ul id="myNav" className= "nav-menu navbar-nav ">
-                    {ListItems}
-                </ul>
+            <ul id="myNav" className= "nav-menu navbar-nav ">
+                {ListItems}
+            </ul>
         );
     }
 }

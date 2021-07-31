@@ -7,7 +7,8 @@ import logo from './psych1.png';
 
 class Chat extends Component {
   componentDidMount() {
-    addResponseMessage('Are you desperately trying to lose weight but getting nowhere?Have you tried every diet but just can’t stick to any? I can help you');
+    addResponseMessage('Are you desperately trying to lose weight but getting nowhere?'+
+                       'Have you tried every diet but just can’t stick to any? I can help you');
   }
 
   handleNewUserMessage = (newMessage) => {
@@ -23,7 +24,6 @@ class Chat extends Component {
           profileAvatar={logo}
           title="Need A Help?"
           subtitle="Pr. Jhon Doe"
-
         />
       </div>
     );

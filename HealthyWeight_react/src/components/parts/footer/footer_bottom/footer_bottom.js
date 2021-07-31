@@ -8,7 +8,10 @@ class FooterBottom extends React.Component {
         return (
             <div className="footer-copyright text-center py-3">
               <Container fluid>
-                &copy; {new Date().getFullYear()} Copyright: <a href="#!" className="text-white"> HealthyWeight.com </a>
+                &copy; {new Date().getFullYear()} Copyright : &nbsp; 
+                <a href="#!" className="text-white">
+                  HealthyWeight.com 
+                </a>
               </Container>
             </div>
         );

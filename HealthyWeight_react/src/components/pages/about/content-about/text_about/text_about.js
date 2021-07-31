@@ -10,7 +10,9 @@ class TextAbout extends React.Component{
                     {this.props.text.Text.map((item,i) => {
                         return(
                             <Col key={i} sm="6">
-                                <p className="font-weight-bolder text-left text-dark h2">{item.title} </p>
+                                <p className="font-weight-bolder text-left text-dark h2">
+                                    {item.title} 
+                                </p>
                                 <p id="text" className={item.cName}>
                                     {item.body}
                                 </p>

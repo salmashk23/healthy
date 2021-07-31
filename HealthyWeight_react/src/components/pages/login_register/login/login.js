@@ -6,19 +6,17 @@ import  "../login_register.css";
 export default class Login extends React.Component {
     constructor(props){
         super(props);
-   
         this.state = {
             fields: {},
             errors: {}
         }
-     }
+    }
     handleValidation(){
         let fields = this.state.fields;
         let errors = {};
         let formIsValid = true;
 
         //Email
-
         if (!fields["email"]) {
             formIsValid = false;
             errors["email"] = "Please enter your email Address.";
@@ -48,7 +46,9 @@ export default class Login extends React.Component {
       //sending form data on button submition clicked 
         fetch('/login_page', {
         method: 'POST',
-        body: JSON.stringify({ "email": this.state.fields["email"], "password": this.state.fields["password"] }),
+        body: JSON.stringify({ 
+            "email": this.state.fields["email"], 
+            "password": this.state.fields["password"] }),
         headers: {
           'Content-Type' : 'application/json'
         }

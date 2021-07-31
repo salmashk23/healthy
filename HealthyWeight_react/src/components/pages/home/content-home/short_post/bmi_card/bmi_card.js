@@ -7,7 +7,9 @@ class BmiCard extends React.Component{
             return(
                 <Col md="4" className="card-deck" >
                     <Card className="my-4 p-3 " id="cardCaro">
-                        <CardImg src = {process.env.PUBLIC_URL + '/img/img_home/img-post/bmi1.jpg'} alt="Card image cap"/>
+                        <CardImg 
+                            src = {process.env.PUBLIC_URL + '/img/img_home/img-post/bmi1.jpg'} 
+                            alt="Card image cap"/>
                         <CardBody>
                             <CardTitle tag="h3">BMI Calculator</CardTitle>
                             <CardText>

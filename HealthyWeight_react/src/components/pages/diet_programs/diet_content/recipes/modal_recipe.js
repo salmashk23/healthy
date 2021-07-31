@@ -72,29 +72,31 @@ class RecipeModal extends Component {
             <p><Rating/></p>
           </ModalHeader>
           <ModalBody>
-              <Row>
+            <Row>
               <Col>
-              <h4>Ingredients</h4>
-              <ListGroup>
-                  {cardIndex !== null && recipeList[cardIndex].ingredients.split(';').map((ingredient,index)=>(
-                         <ListGroupItem key={index} className="p-2"> {ingredient} </ListGroupItem>
-                  ))}
-              </ListGroup>
+                <h4>Ingredients</h4>
+                <ListGroup>
+                    {cardIndex !== null && recipeList[cardIndex].ingredients.split(';').map((ingredient,index)=>(
+                      <ListGroupItem key={index} className="p-2"> {ingredient} </ListGroupItem>
+                    ))}
+                </ListGroup>
               </Col>
               <Col>
-              <h4>Steps</h4>
-              <ListGroup>
+                <h4>Steps</h4>
+                <ListGroup>
                   {cardIndex !== null && recipeList[cardIndex].steps.split(';').map((step,index)=>(
-                         <ListGroupItem key={index} className="p-2"> {step} </ListGroupItem>
+                    <ListGroupItem key={index} className="p-2"> {step} </ListGroupItem>
                   ))}
-              </ListGroup>
+                </ListGroup>
               </Col>
-               </Row>
-               <Button className="btn-warning btn-block" id="more" onClick={e => this.toggleModal(cardIndex)}> close </Button>
+            </Row>
+            <Button className="btn-warning btn-block" id="more" onClick={e => this.toggleModal(cardIndex)}>
+              close 
+            </Button>
           </ModalBody>
         </Modal>
-        </Slider>     
-      </Fragment>
+      </Slider>     
+    </Fragment>
     );
   }
 }

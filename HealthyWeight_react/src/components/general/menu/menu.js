@@ -6,13 +6,10 @@ import './menu.css';
 class Menu extends React.Component{
     render(){
         return(
-
-                <nav  id="myNavbar" className="navbar navbar-expand fixed-top" >
-                    <ListItems menu={this.props.menu}/>
-                    <SearchBar/>
-                </nav>
-
-
+            <nav  id="myNavbar" className="navbar navbar-expand fixed-top" >
+                <ListItems menu={this.props.menu}/>
+                <SearchBar/>
+            </nav>
         );
     }
 }

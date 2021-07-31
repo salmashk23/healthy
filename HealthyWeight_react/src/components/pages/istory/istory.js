@@ -6,14 +6,13 @@ import IstoryContent from './istory_content/istory_content.js';
 
 class Istory extends React.Component {
     constructor() {
-    super();
-    this.state = { data: [] };
-
-  }
-  componentDidMount() {
-    fetch('/istory')
-      .then(res => res.json())
-      .then(json => this.setState({ data: json }));
+        super();
+        this.state = { data: [] };
+    }
+    componentDidMount() {
+        fetch('/istory')
+            .then(res => res.json())
+            .then(json => this.setState({ data: json }));
   }
     render(){
         console.log("istory",this.props.data)

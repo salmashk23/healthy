@@ -5,14 +5,14 @@ import ContentContact from './content_contact/content_contact.js';
 
 class ContactUs extends React.Component {
     constructor() {
-    super();
-    this.state = { data: [] };
-  }
-  componentDidMount() {
-    fetch(`/contact`)
-      .then(res => res.json())
-      .then(json => this.setState({ data: json }));
-  }
+        super();
+        this.state = { data: [] };
+    }
+    componentDidMount() {
+        fetch(`/contact`)
+            .then(res => res.json())
+            .then(json => this.setState({ data: json }));
+    }
     render(){
         if (this.state.data.length===0)
             return (<p>ops</p>);

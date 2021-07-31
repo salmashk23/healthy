@@ -7,16 +7,16 @@ import  "./short_post.css";
 
 
 class ShortPost extends React.Component{
-    render(){
-  return (
+  render(){
+    return (
       <div>
-      <Row className="justify-content-center my-3 " >
-                <TipPost tips={this.props.short.Tips}/>
-                <ArticalePost art={this.props.short.ArtPost} />
-                <BmiCard/>
+        <Row className="justify-content-center my-3">
+          <TipPost tips={this.props.short.Tips}/>
+          <ArticalePost art={this.props.short.ArtPost} />
+          <BmiCard/>
         </Row>
-    </div>
-      );
-    }
+      </div>
+    );
+  }
 }
 export default ShortPost;

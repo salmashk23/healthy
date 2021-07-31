@@ -6,14 +6,14 @@ import FitnessContent from './fitness_content/fitness_content.js';
 
 class FitnessPrograms extends React.Component {
     constructor() {
-    super();
-    this.state = { data: [] };
-  }
-  componentDidMount() {
-    fetch(`/fitness`)
-      .then(res => res.json())
-      .then(json => this.setState({ data: json }));
-  }
+        super();
+        this.state = { data: [] };
+    } 
+    componentDidMount() {
+        fetch(`/fitness`)
+            .then(res => res.json())
+            .then(json => this.setState({ data: json }));
+    }
     render(){
         if (this.state.data.length===0)
             return (<p>ops</p>);

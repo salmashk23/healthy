@@ -10,7 +10,9 @@ class CardAbout extends React.Component{
                 {this.props.card.Card.map((item,i) => {
                     return(
                         <Card key={i} className="my-4 p-3" id="card-about">
-                            <CardImg  src={process.env.PUBLIC_URL + item.image} alt="Card image cap"/>
+                            <CardImg  
+                                src={process.env.PUBLIC_URL + item.image} 
+                                alt="Card image cap"/>
                             <CardBody>
                                 <CardTitle tag="h3">{item.title}</CardTitle>
                                 <CardText>

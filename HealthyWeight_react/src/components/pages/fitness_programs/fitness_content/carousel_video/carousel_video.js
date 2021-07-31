@@ -38,10 +38,7 @@ class CarouselVideo extends React.Component {
           {this.props.video.map((item,i) => {
             return(
               <ReactPlayer key={i}  url={item.video} width={480} controls />
-              )
-             }
-            )
-          }
+          )})}
         </Carousel>
       </Container>
     );

@@ -15,7 +15,12 @@ export default function Try() {
 
   return (
     <div className="modall">
-        <Button onClick={toggleModal} className="btn-outline-light btn-block" id="more" >Try It</Button>
+      <Button 
+        onClick={toggleModal} 
+        className="btn-outline-light btn-block" 
+        id="more">
+          Try It
+      </Button>
       <Modal
         isOpen={isOpen}
         onRequestClose={toggleModal}
@@ -24,10 +29,10 @@ export default function Try() {
         overlayClassName="myoverlay"
       >
         <ModalHeader>
-            <h3 className="text-center"> BMI Calculator </h3>
+          <h3 className="text-center"> BMI Calculator </h3>
         </ModalHeader>
         <ModalBody>
-            <BmiCalc/>
+          <BmiCalc/>
         </ModalBody>
         <Button onClick={toggleModal} className="btn-dark m-4  pl-4 pr-4" > Close</Button>
       </Modal>

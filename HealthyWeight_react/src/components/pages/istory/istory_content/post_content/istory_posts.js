@@ -11,7 +11,7 @@ class CommentBox extends React.Component {
 
   handleInputChange(event) {
     const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = target.value;
     const name = target.name;
 
     this.setState({
@@ -20,57 +20,57 @@ class CommentBox extends React.Component {
   }
 
   handleAddPost() {
-    fetch('/istory',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ "post" : this.state.post })
+    let message = this.state.message;
+    fetch('/istory',{
+      method: 'POST',
+      body: JSON.stringify({message}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
       })
       .then(res => res.json())
-      .then((json) => {
-        window.location.reload();
-      }
+      .then(json => {window.location.reload()}
       );
   }
-
   render() {
     return (
       <Container>
         <Row>
           <Col>
-          {this.props.picture_url &&
-                <div className="p-2" id="content">
-                  <div className="d-flex flex-row align-items-start">
-                    <img 
-                      className="rounded-circle" 
-                      src={ process.env.PUBLIC_URL + this.props.picture_url} 
-                      width="50"
-                      height="50" />
-                    <Input 
-                      type="textarea" 
-                      className="form-control mr-1 shadow-none textarea" 
-                      name="post" 
-                      onChange={this.handleInputChange}/>
+            {!this.props.picture_url &&
+                  <div id="content" className="add-post  text-light m-3 p-3">
+                    You Need To <a className="text-warning " href="/login_page">Login</a> In Order To Add A Post
                   </div>
-                  <div className="mt-2 text-right">
-                  <Button 
-                    className="btn btn-primary btn-sm shadow-none"
-                    type="submit" 
-                    onClick={() => this.handleAddPost()}>
-                      Post
-                  </Button>
+                }
+            
+            {this.props.picture_url &&
+                  <div className="p-2" id="content">
+                   <h3 className="user-name text-center text-warning" >Create Your Own Post</h3>
+                    <div className="d-flex m-3 align-items-start">
+                      <img 
+                        className="rounded-circle" 
+                        src={process.env.PUBLIC_URL + '/img/users/user_f1.png'} 
+                        width="50"
+                        height="50"/>
+                      <Input 
+                        type="textarea" 
+                        className="form-control m-2 pl-4 pr-4 shadow-none textarea" 
+                        name="post" 
+                        onChange={this.handleInputChange}/>
+                    </div>
+                    <div className="mt-2 text-center">
+                      <Button 
+                        className="btn btn-warning mr-4 mb-3 pl-5 pr-5 shadow-none"
+                        type="submit" 
+                        onClick={() => this.handleAddPost()}>
+                          Post
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              }
-              {!this.props.picture_url &&
-                <div id="content" className="add-post  text-light m-3 p-3">
-                  You Need To <a className="text-warning " href="/login_page">Login</a> In Order To Add A Post
-                </div>
-              }
+                }
+              
             {this.props.post.UserPost.map((item, index) => (
-                <Card id="content" className="m-3 p-3" key={index}>
+                <Card id="content" className="mt-4 p-4" key={index}>
                   <CardBody className="d-flex flex-row">
                     <img 
                       className="rounded-circle" 
@@ -82,8 +82,7 @@ class CommentBox extends React.Component {
                       <h6 className="date text-warning text-left ml-2">
                         {new Date(item.date).toISOString().split('T')[0]}
                       </h6>
-                      <p className="comment-text text-light"><i>{item.post}</i></p>
-                      
+                      <p className="comment-text text-light"><i>{item.message}</i></p>
                     </CardText>
                   </CardBody>
                 </Card>

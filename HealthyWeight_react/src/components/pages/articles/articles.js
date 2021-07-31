@@ -6,19 +6,18 @@ import Footer from '../../parts/footer/footer.js';
 
 class Articles extends React.Component {
     constructor() {
-    super();
-    this.state = { data: [] };
-
-  }
-  componentDidMount() {
-    fetch('/articles')
-      .then(res => res.json())
-      .then(json => this.setState({ data: json }));
-  }
+        super();
+        this.state = { data: [] };
+    }
+    componentDidMount() {
+        fetch('/articles')
+        .then(res => res.json())
+        .then(json => this.setState({ data: json }));
+    }
     render(){
         if (this.state.data.length===0)
             return (<p>ops</p>);
-
+            
         return (
             <div className="container-fluid">
                 <Header header={this.state.data.Header}/>

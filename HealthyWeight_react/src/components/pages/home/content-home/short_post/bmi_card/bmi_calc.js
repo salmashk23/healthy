@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Form,Label,Input,Button} from "reactstrap";
 import "./bmi_calc.css";
 
-
 const BmiCalc = () => {
   const [weight, setWeight] = useState();
   const [height, setHeight] = useState();
@@ -22,7 +21,6 @@ const BmiCalc = () => {
   };
 
   const getBmi = (bmi) => {
-
     if (bmi < 18.5) {
       return "Underweight";
     }
@@ -36,34 +34,31 @@ const BmiCalc = () => {
       return "Obesity";
     }
     else{
-        return "NaN";
+      return "NaN";
     }
-
   };
 
   return (
-      <div className="justify-content-center bmi-c">
+    <div className="justify-content-center bmi-c">
       <Form>
-            <Label>Height: </Label>
-            <Input
-              type="number"
-              placeholder="Height in cms"
-              value={height}
-              onChange={handleHeightChange}
-            />
-            <Label>Weight: </Label>
-            <Input
-              type="number"
-              placeholder="Weight in Kgs"
-              value={weight}
-              onChange={handleWeightChange}
-            />
-
-        </Form>
-
+        <Label>Height: </Label>
+        <Input
+          type="number"
+          placeholder="Height in cms"
+          value={height}
+          onChange={handleHeightChange}
+        />
+        <Label>Weight: </Label>
+        <Input
+          type="number"
+          placeholder="Weight in Kgs"
+          value={weight}
+          onChange={handleWeightChange}
+        />
+      </Form>
       <div className="row">
         <Button className="btn-warning m-4" onClick={computeBmi}>
-            Calculate
+          Calculate
         </Button>
       </div>
       <div className="text-center">

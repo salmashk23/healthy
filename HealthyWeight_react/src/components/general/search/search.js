@@ -11,12 +11,10 @@ class SearchBar extends React.Component {
                     type="text"
                     id="header-search"
                     placeholder="Search.."
-                    
                     name="s"
                 />
-            <Button type="submit" className="text-light"><i className="fa fa-search"> </i></Button>
+                <Button type="submit" className="text-light"><i className="fa fa-search"> </i></Button>
             </Form>
-
         )
     }
 }

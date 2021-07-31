@@ -22,10 +22,7 @@ export default class DescStory extends React.Component{
                             <h1 className="display-2"> {item.title} </h1>
                             <h3 className="text-light display-3"> {item.content} </h3>
                         </div>
-                            )
-                        }     
-                     )
-                 }
+                )})}
             </Carousel>
         );
     }

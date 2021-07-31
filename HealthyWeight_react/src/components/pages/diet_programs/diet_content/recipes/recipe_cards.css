@@ -91,14 +91,14 @@ hr {
 
 .new-recipe-form {
 	animation-duration: 1s;
-    animation-name: slidein;
-    position: absolute;
-    margin-top: 250px;
-    padding: 0 15px;
+  animation-name: slidein;
+  position: absolute;
+  margin-top: 250px;
+  padding: 0 15px;
 	min-width: 450px;
 	text-align: left;
-    // background-color: $gray;
-    z-index: 3;
+  background-color: gray;
+  z-index: 3;
 	border: 1px solid #616161;
 	border-radius: 7px;
 	background-color: #FFF;

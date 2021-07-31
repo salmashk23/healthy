@@ -4,16 +4,15 @@ import Slider from "react-slick";
 import "../../../../general/card_carousel/card_carousel.css";
 
 
-
 class DietCard extends React.Component{
     render(){
         const settings = {
-         dots: false,
-         infinite: true,
-         speed: 500,
-         slidesToShow: 3,
-         slidesToScroll: 1
-    };
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        };
         return(
             <Container className="cards-container" >
                 <Slider {...settings}>
@@ -25,12 +24,14 @@ class DietCard extends React.Component{
                                     <CardBody>
                                         <CardTitle className="mb-3 card-title" >{item.title}</CardTitle>
                                         <CardText className="card-text">
-                                                {item.summary}
+                                            {item.summary}
                                         </CardText>
                                     </CardBody>
                                     <a href={item.url}>
-                                        <Button className="btn-outline-light btn-block" id="more">More Info</Button>
-                                     </a>
+                                        <Button className="btn-outline-light btn-block" id="more">
+                                            More Info
+                                        </Button>
+                                    </a>
                                 </Card>
                             </div>
                                 )
@@ -39,7 +40,7 @@ class DietCard extends React.Component{
                     }
                 </Slider>
             </Container>
-         );
+        );
     }
  }
 
