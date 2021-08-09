@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Input, Form, Label, Col, Row } from 'reactstrap';
+import { Button, Input, Form, Label, Col, Row , Card , CardBody , CardText} from 'reactstrap';
 import "./post.css";
 
 export default class Post extends Component {
@@ -47,13 +47,14 @@ export default class Post extends Component {
 
         }
         // sending form data on button submition clicked 
-        const response = await fetch('/istoryForm', {
+        const response = await fetch('/istory', {
           method: 'POST',
-          body: JSON.stringify({data}),
+          body: JSON.stringify(data),
           headers: {
             'Content-Type' : 'application/json'
           }
-        });
+        })
+        .then(json => {window.location.reload()});
         const body = await response.text();
         this.setState({ dataResponse: body });
         console.log("respond"+this.state.dataResponse);
@@ -105,6 +106,24 @@ export default class Post extends Component {
                     </Button>
                     <div className='form-inputs'><p className="text-danger text-center h4">{this.state.dataResponse}</p></div> 
                 </Form>
+                {this.props.post.UserPost.map((item, index) => (
+                <Card id="content" className="mt-4 p-4" key={index}>
+                  <CardBody className="d-flex flex-row">
+                    <img 
+                      className="rounded-circle" 
+                      src={process.env.PUBLIC_URL + item.picture_url} 
+                      width="50"
+                      height="50" />
+                    <CardText>
+                      <h4 className="user-name d-block text-light  p-2">{item.name}</h4>
+                      <h6 className="date text-warning text-left ml-2">
+                        {new Date(item.date).toISOString().split('T')[0]}
+                      </h6>
+                      <p className="comment-text text-light"><i>{item.message}</i></p>
+                    </CardText>
+                  </CardBody>
+                </Card>
+                ))}
             </Col>
         </Row>
         );

@@ -9,15 +9,11 @@ class CommentBox extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value
-    });
-  }
+  handleInputChange(e) {
+    let key = e.target.name;
+    let value = e.target.value;
+    this.setState({ [key]: value });
+ }
 
   handleAddPost() {
     let message = this.state.message;
@@ -44,30 +40,30 @@ class CommentBox extends React.Component {
                 }
             
             {this.props.picture_url &&
-                  <div className="p-2" id="content">
-                   <h3 className="user-name text-center text-warning" >Create Your Own Post</h3>
-                    <div className="d-flex m-3 align-items-start">
-                      <img 
-                        className="rounded-circle" 
-                        src={process.env.PUBLIC_URL + '/img/users/user_f1.png'} 
-                        width="50"
-                        height="50"/>
-                      <Input 
-                        type="textarea" 
-                        className="form-control m-2 pl-4 pr-4 shadow-none textarea" 
-                        name="post" 
-                        onChange={this.handleInputChange}/>
-                    </div>
-                    <div className="mt-2 text-center">
-                      <Button 
-                        className="btn btn-warning mr-4 mb-3 pl-5 pr-5 shadow-none"
-                        type="submit" 
-                        onClick={() => this.handleAddPost()}>
-                          Post
-                      </Button>
-                    </div>
+              <div className="p-2" id="content">
+                <h3 className="user-name text-center text-warning" >Create Your Own Post</h3>
+                  <div className="d-flex m-3 align-items-start">
+                    <img 
+                      className="rounded-circle" 
+                      src={this.props.picture_url}
+                      width="50"
+                      height="50"/>
+                    <Input 
+                      type="textarea"
+                      className="form-control m-2 pl-4 pr-4 shadow-none textarea" 
+                      name="message" 
+                      onChange={this.handleInputChange}/>
                   </div>
-                }
+                  <div className="mt-2 text-center">
+                    <Button 
+                      className="btn btn-warning mr-4 mb-3 pl-5 pr-5 shadow-none"
+                      type="submit" 
+                      onClick={() => this.handleAddPost()}>
+                        Post
+                    </Button>
+                  </div>
+                </div>
+              }
               
             {this.props.post.UserPost.map((item, index) => (
                 <Card id="content" className="mt-4 p-4" key={index}>
