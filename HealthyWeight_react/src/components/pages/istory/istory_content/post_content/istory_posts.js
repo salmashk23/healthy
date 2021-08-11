@@ -29,6 +29,7 @@ class CommentBox extends React.Component {
       );
   }
   render() {
+    var pic= this.props.picture_url.replace(/['"]+/g, '')
     return (
       <Container>
         <Row>
@@ -45,9 +46,9 @@ class CommentBox extends React.Component {
                   <div className="d-flex m-3 align-items-start">
                     <img 
                       className="rounded-circle" 
-                      src={this.props.picture_url}
+                      src= {pic}
                       width="50"
-                      height="50"/>
+                      height="50"></img>
                     <Input 
                       type="textarea"
                       className="form-control m-2 pl-4 pr-4 shadow-none textarea" 

@@ -28,6 +28,8 @@ const jsonParser = express.json()
 // Init the session
 app.use(session({
   secret: 'keyboard healthy',
+  resave: false,
+  saveUninitialized: true,
   cookie: {
     maxAge: 6000000
    },
@@ -79,7 +81,6 @@ app.post('/istory', jsonParser, async (req, res) => {
   if (!req.session || !req.session.userid) {
     res.json({"error": "Something went wrong"});
   }
-  console.log("hi",req.body.message)
   result = await generalDb.DbQuery(`INSERT INTO \`istory_users_posts\` VALUES( NULL , ${req.session.userid},'${req.body.message}', NOW() )`);
   res.json({ "id": result.insertId });
 });
